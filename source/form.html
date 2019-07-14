@@ -34,6 +34,81 @@
     </div>
   </header>
   <main class="page-main">
+    <h1 class="page-title"></h1>
+    <p class="page-main__instruction"></p>
+    <section class="questionnaire">
+      <h2 class="visually-hidden">Анкета</h2>
+      <form class="questionnaire__filter" method="post" action="https://echo.htmlacademy.ru">
+        <fieldset class="questionnaire__general-info">
+          <p>
+            <label for="cat-name"></label>
+            <input id="cat-name" type="text" name="name" placeholder="Барсик" required>
+          </p>
+          <p>
+            <label for="cat-weight"></label>
+            <input id="cat-weight" type="text" name="weight" placeholder="7" required>
+          </p>
+          <p>
+            <label for="cat-age"></label>
+            <input id="cat-age" type="text" name="age" placeholder="7">
+          </p>
+        </fieldset>
+        <fieldset class="questionnaire__programm">
+          <ul class="questionnaire__programm-list">
+             <li class="filter__option">
+              <input class="questionnaire__filter-radio" type="radio" name="programm" value="weight-lose" id="filter-weight-lose" checked>
+              <label for="filter-weight-lose"></label>
+            </li>
+             <li class="filter_option">
+              <input class="questionnaire__filter-radio" type="radio" name="programm" value="weight-gain" id="filter-weight-gain">
+              <label for="filter-weight-gain"></label>
+            </li>
+             <li class="filter__option">
+              <input class="questionnaire__filter-radio" type="radio" name="programm" value="advice" id="filter-advice">
+              <label for="filter-advice"></label>
+              </li>
+           </ul>
+        </fieldset>
+        <fieldset>
+          <legend class="legend-title"></legend>
+          <p>
+            <label for="cat-owner-name"></label>
+            <input id="cat-owner-name" type="email" placeholder="" required>
+          </p>
+          <p>
+            <label for="cat-owner-number"></label>
+            <input id="cat-owner-number" type="tel" placeholder="" required>
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend class="legend-title"></legend>
+          <textarea name="about-cat" cols="30" rows="10" placeholder=""></textarea>
+        </fieldset>
+        <fieldset>
+          <legend class="legend-title"></legend>
+          <ul class="questionnaire__extra-data">
+            <li class="filter-option">
+              <input class="questionnaire__filter-checkbox" type="checkbox" name="sweetner" id="filter-sweetner" checked>
+              <label for="filter-sweetner"></label>
+            </li>
+            <li class="filter-option">
+              <input class="questionnaire__filter-checkbox" type="checkbox" name="water" id="filter-water">
+              <label for="filter-water"></label>
+            </li>
+            <li class="filter-option">
+              <input class="questionnaire__filter-checkbox" type="checkbox" name="milk" id="filter-milk">
+              <label for="filter-milk"></label>
+            </li>
+            <li class="filter-option">
+              <input class="questionnaire__filter-checkbox" type="checkbox" name="vitamins" id="filter-vitamins">
+              <label for="filter-vitamins"></label>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="questionnaire__button button" type="submit"></button>
+        <small></small>
+      </form>
+    </section>
   </main>
   <footer class="page-footer">
     <a class="page-footer__logo">
