@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="page-header">
@@ -20,40 +21,42 @@
           </button>
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
-              <a href="index.html">Главная</a>
+              <a class="site-list__link" href="index.html">Главная</a>
             </li>
             <li class="site-list__item">
-              <a href="catalog.html">Каталог продукции</a>
+              <a class="site-list__link" href="catalog.html">Каталог продукции</a>
             </li>
             <li class="site-list__item" aria-current="page">
-              <a>Подбор программы</a>
+              <a class="site-list__link">Подбор программы</a>
             </li>
           </ul>
         </nav>
       </div>
     </div>
   </header>
-  <main class="page-main">
+  <main class="page-inner">
     <h1 class="page-title">Подбор программы</h1>
-    <p class="page-main__instruction">Заполните анкету и мы подберем программу питания для вашего кота</p>
+    <p class="page-inner__instruction">Заполните анкету и мы подберем программу питания для вашего кота</p>
     <section class="questionnaire">
       <h2 class="visually-hidden">Анкета</h2>
-      <form class="questionnaire__filter" method="post" action="https://echo.htmlacademy.ru">
+      <form class="questionnaire__data" method="post" action="https://echo.htmlacademy.ru">
         <fieldset class="questionnaire__general-info">
-          <p>
+          <legend class="visually-hidden">Данные кота</legend>
+          <p class="form-group">
             <label class="form-label" for="cat-name">Имя:*</label>
-            <input id="cat-name" type="text" name="name" placeholder="Барсик" required>
+            <input class="data-input" id="cat-name" type="text" name="name" placeholder="Барсик" required>
           </p>
-          <p>
+          <p class="form-group">
             <label class="form-label" for="cat-weight">Вес (кг):*</label>
-            <input id="cat-weight" type="text" name="weight" placeholder="7" required>
+            <input class="data-input" id="cat-weight" type="text" name="weight" placeholder="7" required>
           </p>
-          <p>
+          <p class="form-group">
             <label class="form-label" for="cat-age">Возраст (лет):</label>
-            <input id="cat-age" type="text" name="age" placeholder="7">
+            <input class="data-input" id="cat-age" type="text" name="age" placeholder="7">
           </p>
         </fieldset>
         <fieldset class="questionnaire__programm">
+          <legend class="visually-hidden">Выбор программы</legend>
           <ul class="questionnaire__programm-list">
             <li class="questionnaire__filter-option">
               <input class="questionnaire__filter-radio" type="radio" name="programm" value="weight-lose" id="filter-weight-lose" checked>
@@ -69,24 +72,24 @@
               </li>
           </ul>
         </fieldset>
-        <fieldset>
+        <fieldset class="questionnaire__owner-info">
           <legend class="legend-title">Контактные данные (владельца кота)</legend>
-          <p>
+          <p class="form-group">
             <label class="form-label" for="cat-owner-name">E-mail:*</label>
-            <input id="cat-owner-name" type="email" placeholder="kuklachev@gmail.com" required>
+            <input class="data-input" id="cat-owner-name" type="email" placeholder="kuklachev@gmail.com" required>
           </p>
-          <p>
+          <p class="form-group">
             <label class="form-label" for="cat-owner-number">Телефон:*</label>
-            <input id="cat-owner-number" type="tel" placeholder="8 (960) 900-60-90" required>
+            <input class="data-input" id="cat-owner-number" type="tel" placeholder="8 (960) 900-60-90" required>
           </p>
         </fieldset>
-        <fieldset>
+        <fieldset class="questionnaire__comment">
           <legend class="legend-title">Комментарий</legend>
-          <textarea name="about-cat" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+          <textarea class="questionnaire__comment-text" name="about-cat" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
-        <fieldset>
+        <fieldset class="questionnaire__extra-products">
           <legend class="legend-title">Дополнительно</legend>
-          <ul class="questionnaire__extra-data">
+          <ul class="questionnaire__extra-data-list">
             <li class="filter-option">
               <input class="questionnaire__filter-checkbox" type="checkbox" name="sweetner" id="filter-sweetner" checked>
               <label class="form-label" for="filter-sweetner">Сахарозаменитель</label>
@@ -106,7 +109,7 @@
           </ul>
         </fieldset>
         <button class="questionnaire__button button" type="submit">Отправить заявку</button>
-        <small class="questionnaire__legend"><sup>*</sup> — Обязательные поля</small>
+        <p class="questionnaire__extra-info"><small class="questionnaire__legend"><sup>*</sup> — Обязательные поля</small></p>
       </form>
     </section>
   </main>
