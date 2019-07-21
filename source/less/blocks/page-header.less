@@ -1,3 +1,45 @@
 .page-header {
+  display: flex;
+  flex-direction: column;
+  min-height: 546px;
   margin-bottom: 22px;
+}
+
+.page-header__logo {
+  width: 191px;
+  height: 38px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    min-height: 950px;
+  }
+  .page-header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 708px;
+  }
+  .site-list {
+    width: 450px;
+  }
+  .page-header__logo {
+    width: 173px;
+    height: 58px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    min-height: 695px;
+    background-image: url("../../img/index-background-desktop@1x.jpg");
+    background-position: right;
+    background-repeat: no-repeat;
+  }
+  .page-header__wrapper {
+    width: 1220px;
+  }
+  .page-header__logo {
+    width: 202px;
+    height: 59px;
+  }
 }

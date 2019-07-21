@@ -1,11 +1,24 @@
 .example {
+  background-color: #e3e3e3;
+}
+
+.example__container {
+  width: 320px;
+  margin: 0 auto;
   padding-top: 21px;
   padding-bottom: 37px;
-  background-color: #e3e3e3;
 }
 
 .example__description {
   margin: 0;
+  padding-top: 18px;
+  padding-bottom: 23px;
+}
+
+.example__result {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .example__value {
@@ -36,4 +49,34 @@
   font-family: "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
   color: @font-dark;
+}
+
+@media (min-width: @tablet-width) {
+  .example__container {
+    width: 708px;
+  }
+  .example__result-text {
+    display: flex;
+    flex-direction: column;
+  }
+  .exapmle__numbers {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example__container {
+    width: 1220px;
+  }
+  .example__wrapper-result {
+    display: flex;
+    justify-content: space-between;
+  }
+  .example__result-text {
+    width: 440px;
+  }
+  .example__result-image {
+    width: 610px;
+  }
 }
