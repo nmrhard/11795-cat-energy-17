@@ -80,14 +80,14 @@
 
 @media (min-width: @tablet-width) {
   .questionnaire {
-    width: 708px;
-    margin: 0 auto;
+    width: auto;
+    margin: 0;
   }
 
   .questionnarie__wrapper {
-    width: 100%;
+    width: 708px;
+    margin: 0 auto;
     padding-left: 40px;
-    padding-right: 37px;
   }
 
   .questionnaire__extra-data-list {
@@ -107,7 +107,13 @@
 
 @media (min-width: @desktop-width) {
   .questionnaire {
-    width: 1220px;
+    width:1220px;
+    margin: 0 auto;
+  }
+
+  .questionnarie__wrapper {
+    width: auto;
+    padding-left: 0;
   }
 
   .questionnaire__columns {
@@ -127,7 +133,7 @@
     width: 570px;
   }
 
-  .questionnaire__owner_wrapper {
+  .questionnaire__owner-wrapper {
     display: flex;
     justify-content: space-between;
   }
@@ -147,6 +153,10 @@
   .questionnaire__filter-extra {
     width: 245px;
     margin-right: 80px;
+
+    &:nth-child(2n) {
+      margin-right: 80px;
+    }
 
     &:nth-child(4n) {
       margin-right: 0;
