@@ -6,14 +6,32 @@
 }
 
 .site-list__item {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.site-list__link {
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 24px;
   font-size: 16px;
   line-height: 20px;
   font-family: "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
+  color: @font-dark;
 }
 
-.site-list__link {
-  color: @font-dark;
+@media (max-width: @mobile-width-only) {
+  .main-nav--closed .site-list__item {
+    display: none;
+  }
+
+  .main-nav--opened .site-list__item {
+    display: block;
+  }
+
+  .main-nav--nojs .site-list__item {
+    display: block;
+  }
 }
 
 @media (min-width: @tablet-width) {
