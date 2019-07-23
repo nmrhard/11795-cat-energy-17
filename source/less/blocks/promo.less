@@ -1,6 +1,4 @@
 .promo {
-  width: 320px;
-  margin: 0 auto;
   padding-top: 29px;
   text-align: center;
   color: @white;
@@ -8,6 +6,10 @@
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-position: 0 0;
   background-repeat: no-repeat;
+}
+
+.promo__container {
+  .mobile-container;
 }
 
 .promo__title {
@@ -35,12 +37,15 @@
 
 @media (min-width: @tablet-width) {
   .promo {
-    width: 708px;
     padding-top: 62px;
     padding-bottom: 529px;
     text-align: left;
     color: @font-dark;
     background: transparent;
+  }
+
+  .promo__container {
+    .tablet-container;
   }
 
   .promo__title {
@@ -55,10 +60,14 @@
 
 @media (min-width: @desktop-width) {
   .promo {
-    width: 1220px;
     padding-top: 112px;
     padding-bottom: 186px;
   }
+
+  .promo__container {
+    .desktop-container;
+  }
+
 
   .promo__title {
     margin-bottom: 37px;

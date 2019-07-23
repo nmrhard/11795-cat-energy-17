@@ -1,8 +1,11 @@
 .programms {
-  width: 320px;
-  margin: 0 auto;
   margin-bottom: 22px;
 }
+
+.programms__container {
+  .mobile-container;
+}
+
 
 .programms__list {
   margin: 0;
@@ -46,8 +49,8 @@
 }
 
 @media (min-width: @tablet-width) {
-  .programms {
-    width: 708px;
+  .programms__container {
+    .tablet-container;
   }
 
   .programms__item {
@@ -60,8 +63,8 @@
 }
 
 @media (min-width: @desktop-width) {
-  .programms {
-    width: 1220px;
+  .programms__container {
+    .desktop-container;
   }
 
   .programms__list {

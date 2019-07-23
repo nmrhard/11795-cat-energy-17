@@ -1,7 +1,9 @@
 .features {
-  width: 320px;
-  margin: 0 auto;
   margin-bottom: 42px;
+}
+
+.features__container {
+  .mobile-container;
 }
 
 .features__list {
@@ -20,8 +22,8 @@
 }
 
 @media (min-width: @tablet-width) {
-  .features {
-    width: 708px;
+  .features__container {
+    .tablet-container;
   }
 
   .features__items {
@@ -37,8 +39,8 @@
 }
 
 @media (min-width: @desktop-width) {
-  .features {
-    width: 1220px;
+  .features__container {
+    .desktop-container;
   }
 
   .features__items {

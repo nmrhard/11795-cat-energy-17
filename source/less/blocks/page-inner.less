@@ -1,6 +1,8 @@
+.page_inner__container {
+  .mobile-container;
+}
+
 .page-inner__instruction {
-  width: 320px;
-  margin: 0 auto;
   margin-bottom: 35px;
   line-height: 18px;
   font-family: "Oswald", "Arial", sans-serif;
@@ -9,15 +11,21 @@
 }
 
 @media (min-width: @tablet-width) {
+  .page_inner__container {
+    .tablet-container;
+  }
+
   .page-inner__instruction {
-    width: 708px;
     padding-left: 41px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .page_inner__container {
+    .desktop-container;
+  }
+
   .page-inner__instruction {
-    width: 1220px;
     padding-left: 0;
   }
 }

@@ -3,8 +3,7 @@
 }
 
 .example__container {
-  width: 320px;
-  margin: 0 auto;
+  .mobile-container;
   padding-top: 21px;
   padding-bottom: 37px;
 }
@@ -53,7 +52,7 @@
 
 @media (min-width: @tablet-width) {
   .example__container {
-    width: 708px;
+    .tablet-container;
   }
 
   .example__result-text {
@@ -69,7 +68,7 @@
 
 @media (min-width: @desktop-width) {
   .example__container {
-    width: 1220px;
+    .desktop-container;
   }
 
   .example__wrapper-result {
