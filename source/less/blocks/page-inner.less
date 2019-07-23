@@ -1,8 +1,31 @@
+.page_inner__container {
+  .mobile-container;
+}
+
 .page-inner__instruction {
-  margin: 0;
   margin-bottom: 35px;
   line-height: 18px;
   font-family: "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
   color: @font-dark;
+}
+
+@media (min-width: @tablet-width) {
+  .page_inner__container {
+    .tablet-container;
+  }
+
+  .page-inner__instruction {
+    padding-left: 41px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page_inner__container {
+    .desktop-container;
+  }
+
+  .page-inner__instruction {
+    padding-left: 0;
+  }
 }

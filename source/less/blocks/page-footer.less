@@ -1,5 +1,29 @@
 .page-footer {
+  background: #f0f0f0;
+}
+
+.page-footer__container {
+  .mobile-container;
   padding-top: 39px;
   padding-bottom: 22px;
-  background: #f0f0f0;
+}
+
+.page-footer__logo {
+  width: 128px;
+  height: 24px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .tablet-container;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer__container {
+    .desktop-container;
+  }
 }

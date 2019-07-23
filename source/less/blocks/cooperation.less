@@ -1,9 +1,16 @@
-.cooperation {
+.cooperation__container {
+  .mobile-container;
   padding-top: 29px;
   padding-bottom: 24px;
 }
 
+.cooperation__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
 .cooperation__text {
+  width: 125px;
   margin: 0;
   font-size: 16px;
   line-height: 20px;
@@ -13,6 +20,51 @@
 }
 
 .cooperation__address {
+  width: 140px;
   line-height: 20px;
   font-style: normal;
+}
+
+@media (min-width: @tablet-width) {
+  .cooperation__container {
+    .tablet-container;
+  }
+
+  .cooperation__text {
+    padding-left: 42px;
+    width: 160px;
+  }
+
+  .cooperation__address {
+    padding-right: 42px;
+    width: 160px;
+    text-align: right;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .cooperation {
+    position: relative;
+  }
+
+  .cooperation__container {
+    position: absolute;
+    top: 95px;
+    left: 110px;
+    width: 570px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: @white;
+  }
+
+  .cooperation__text {
+    padding-left: 77px;
+    width: 160px;
+  }
+
+  .cooperation__address {
+    padding-right: 85px;
+    width: 160px;
+    text-align: left;
+  }
 }

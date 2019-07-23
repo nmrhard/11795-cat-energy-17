@@ -1,13 +1,20 @@
 .promo {
+  padding-top: 29px;
+  text-align: center;
+  color: @white;
   background-color: #71b145;
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-position: 0 0;
   background-repeat: no-repeat;
-  color: @white;
+}
+
+.promo__container {
+  .mobile-container;
 }
 
 .promo__title {
   margin: 0;
+  margin-bottom: 20px;
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
@@ -17,8 +24,56 @@
 
 .promo__text {
   margin: 0;
+  margin-bottom: 30px;
   font-size: 14px;
   line-height: 14px;
   font-family: "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
+}
+
+.promo__image {
+  margin: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .promo {
+    padding-top: 62px;
+    padding-bottom: 529px;
+    text-align: left;
+    color: @font-dark;
+    background: transparent;
+  }
+
+  .promo__container {
+    .tablet-container;
+  }
+
+  .promo__title {
+    margin-bottom: 46px;
+    color: @font-dark;
+  }
+
+  .promo__text {
+    margin-bottom: 49px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promo {
+    padding-top: 112px;
+    padding-bottom: 186px;
+  }
+
+  .promo__container {
+    .desktop-container;
+  }
+
+
+  .promo__title {
+    margin-bottom: 37px;
+  }
+
+  .promo__text {
+    margin-bottom: 54px;
+  }
 }

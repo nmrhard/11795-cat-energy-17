@@ -1,4 +1,10 @@
+.extra-products__container {
+  .mobile-container;
+}
+
 .extra-products__title {
+  font-size: 24px;
+  line-height: 24px;
   padding-top: 31px;
   padding-bottom: 31px;
 }
@@ -41,4 +47,29 @@
   font-size: 16px;
   line-height: 20px;
   color: @white;
+}
+
+@media (min-width: @tablet-width) {
+  .extra-products__container {
+    .tablet-container;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .extra-products__container {
+    .desktop-container;
+  }
+
+  .extra-products__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .extra-products__list {
+    width: 895px;
+  }
+
+  .extra-products__present {
+    width: 245px;
+  }
 }
