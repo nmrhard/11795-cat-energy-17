@@ -6,7 +6,6 @@
   .mobile-container;
 }
 
-
 .programms__list {
   margin: 0;
   padding: 0;
@@ -14,20 +13,60 @@
 }
 
 .programms__item {
-  padding-top: 23px;
+  position: relative;
+  padding-top: 31px;
   padding-right: 20px;
   padding-left: 21px;
   padding-bottom: 23px;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   background-color: #f2f2f2;
 
   &:last-child {
     margin-bottom: 0;
   }
+
+  ::before {
+    content: '';
+    position: absolute;
+    top: 24px;
+    left: 22px;
+    width: 50px;
+    height: 51px;
+    background-color: #68b738;
+    border-radius: 50%;
+  }
+
+  &--loss::before {
+    content: '';
+    position: absolute;
+    top: 24px;
+    left: 30px;
+    width: 35px;
+    height: 49px;
+    background-image: url(../img/icon-cat-slim.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 20;
+  }
+
+  &--gain::before {
+    content: '';
+    position: absolute;
+    top: 35px;
+    left: 13px;
+    width: 67px;
+    height: 28px;
+    background-image: url(../img/icon-cat-pro.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 20;
+  }
 }
 
 .programms__title {
   margin: 0;
+  padding-left: 70px;
+  padding-bottom: 29px;
   font-size: 24px;
   line-height: 37px;
   font-weight: 400;
@@ -38,14 +77,22 @@
 
 .programms__description {
   margin: 0;
+  padding-bottom: 22px;
+  border-bottom: 1px solid #d9d9d9;
 }
 
 .programms__link {
+  display: block;
+  padding-top: 19px;
   font-size: 16px;
   line-height: 16px;
   font-family: "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
   color: @font-dark;
+
+  &:active {
+    color: fade(@font-dark, 30%);
+  }
 }
 
 @media (min-width: @tablet-width) {
