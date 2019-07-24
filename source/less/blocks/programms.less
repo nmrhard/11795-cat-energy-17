@@ -25,7 +25,7 @@
     margin-bottom: 0;
   }
 
-  ::before {
+  &::before {
     content: '';
     position: absolute;
     top: 24px;
@@ -36,7 +36,7 @@
     border-radius: 50%;
   }
 
-  &--loss::before {
+  &--loss::after {
     content: '';
     position: absolute;
     top: 24px;
@@ -49,7 +49,7 @@
     z-index: 20;
   }
 
-  &--gain::before {
+  &--gain::after {
     content: '';
     position: absolute;
     top: 35px;
@@ -82,6 +82,7 @@
 }
 
 .programms__link {
+  position: relative;
   display: block;
   padding-top: 19px;
   font-size: 16px;
@@ -93,6 +94,18 @@
   &:active {
     color: fade(@font-dark, 30%);
   }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 22px;
+    left: 96px;
+    width: 24px;
+    height: 11px;
+    background-image: url(../img/icon-right-arrow-long.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -101,10 +114,67 @@
   }
 
   .programms__item {
-    margin-bottom: 30px;
+    padding-top: 77px;
+    padding-bottom: 62px;
+    padding-left: 53px;
+    margin-bottom: 27px;
 
     &:last-child {
       margin-bottom: 0;
+    }
+
+    &::before {
+      left: auto;
+      right: 62px;
+      top: 50%;
+      width: 200px;
+      height: 200px;
+      margin-top: -93px;
+    }
+
+    &--loss::after {
+      left: auto;
+      right: 92px;
+      top: 80px;
+      width: 140px;
+      height: 194px;
+    }
+
+    &--gain::after {
+      left: auto;
+      right: 28px;
+      top: 137px;
+      width: 268px;
+      height: 112px;
+    }
+  }
+
+  .programms__title {
+    padding-bottom: 24px;
+    padding-left: 0;
+    font-size: 36px;
+    line-height: 37px;
+  }
+
+  .programms__description {
+    width: 380px;
+    font-size: 16px;
+    line-height: 24px;
+    border: none;
+  }
+
+  .programms__item--gain .programms__description {
+    width: 340px;
+  }
+
+  .programms__link {
+    padding-top: 37px;
+    font-size: 20px;
+    line-height: 20px;
+
+    &:after {
+      top: 40px;
+      left: 130px;
     }
   }
 }
