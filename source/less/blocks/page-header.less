@@ -76,15 +76,29 @@
     display: flex;
     justify-content: space-between;
     .tablet-container;
+    padding: 24px;
   }
 
-  .site-list {
-    width: 450px;
+  .page-header__toggle-menu {
+    display: none;
+  }
+
+  .page-header__top {
+    padding: 0;
+    border: none;
   }
 
   .page-header__logo {
     width: 173px;
     height: 58px;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
   }
 }
 
