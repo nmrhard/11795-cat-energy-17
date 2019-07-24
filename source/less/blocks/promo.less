@@ -2,8 +2,10 @@
   padding-top: 23px;
   text-align: center;
   color: @white;
-  background-image: url("../img/index-background-mobile@1x.jpg");
-  background-position: center top;
+  background-image: url("../img/index-can-mobile@1x.png"),
+                    url("../img/index-background-mobile@1x.jpg");
+  background-position: center 80%,
+                       center top;
   background-repeat: no-repeat;
 }
 
@@ -23,15 +25,11 @@
 
 .promo__text {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 304px;
   font-size: 14px;
   line-height: 14px;
   font-family: "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
-}
-
-.promo__image {
-  margin: 0;
 }
 
 @media (min-width: @tablet-width) {
@@ -62,10 +60,6 @@
     font-size: 20px;
     line-height: 20px;
     margin-bottom: 46px;
-  }
-
-  .promo__image {
-    display: none;
   }
 }
 
