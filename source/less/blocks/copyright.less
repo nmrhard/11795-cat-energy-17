@@ -1,9 +1,34 @@
+.copyright {
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+
 .copyright__link {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-size: 16px;
   line-height: 16px;
   color: @font-light;
+}
+
+.copyright__logo {
+  width: 27px;
+  height: 34px;
+  fill: #666666;
+
+  &:hover {
+    fill: #68b738;
+  }
+
+  &:active {
+    fill: #68b738;
+    opacity: 0.3
+  }
+}
+
+.copyright__company:active {
+  opacity: 0.3;
 }
 
 @media (min-width: @tablet-width) {
