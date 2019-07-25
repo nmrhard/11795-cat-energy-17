@@ -89,13 +89,11 @@
   .features__list {
     display: flex;
     flex-wrap: wrap;
-    font-size: 0;
   }
 
   .features__items {
-    width: 250px;
+    width: 245px;
     margin-bottom: 84px;
-    margin-right: 133px;
     padding-top: 112px;
     padding-bottom: 50px;
     padding-left: 0;
@@ -103,8 +101,8 @@
     line-height: 24px;
     z-index: 5;
 
-    &:nth-child(2n) {
-      margin-right: 0;
+    &:nth-child(odd) {
+      margin-right: 138px;
     }
 
     &:last-child {
@@ -129,7 +127,7 @@
   .features__number {
     position: absolute;
     top: -40px;
-    right: 2px;
+    right: 0;
     display: block;
     font-size: 280px;
     line-height: 280px;
@@ -139,7 +137,11 @@
   }
 
   .features__items--useful .features__number {
-    right: 21px;
+    right: 15px;
+  }
+
+  .features__items--result .features__number {
+    right: -4px;
   }
 }
 
@@ -149,9 +151,14 @@
   }
 
   .features__items {
-    display: inline-block;
-    width: 245px;
-    margin-right: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 82px;
+    margin-bottom: 0;
+
+    &:nth-child(odd) {
+      margin-right: 79px;
+    }
 
     &:last-child {
       margin-right: 0;
