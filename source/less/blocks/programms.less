@@ -192,6 +192,56 @@
   .programms__item {
     width: 570px;
     margin-bottom: 0;
+    padding-top: 77px;
+    padding-bottom: 60px;
+    padding-right: 55px;
+    padding-left: 52px;
     box-sizing: border-box;
+
+    &::before {
+      top: 141px;
+      right: auto;
+      left: 52px;
+      width: 100px;
+      height: 100px;
+    }
+
+    &--loss::after {
+      top: 42px;
+      right: auto;
+      left: 66px;
+      width: 70px;
+      height: 97px;
+    }
+
+    &--gain::after {
+      top: 70px;
+      right: auto;
+      left: 34px;
+      width: 134px;
+      height: 56px;
+    }
+  }
+
+  .programms__title {
+    padding-left: 162px;
+    margin-bottom: 49px;
+  }
+
+  .programms__description {
+    width: 100%;
+    padding-bottom: 0;
+  }
+
+  .programms__item--gain .programms__description {
+    width: 100%;
+  }
+
+  .programms__link {
+    padding-top: 32px;
+
+    &:after {
+      top: 37px;
+    }
   }
 }
