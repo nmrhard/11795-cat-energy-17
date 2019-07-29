@@ -1,11 +1,22 @@
 .page-header {
   display: flex;
   flex-direction: column;
-  margin-bottom: 22px;
+  background-color: @white;
 }
 
 .page-header__container {
-  .mobile-container;
+  width: 320px;
+  margin: 0 auto;
+}
+
+.page-header__top {
+  display: flex;
+  align-items: center;
+  padding-top: 13px;
+  padding-bottom: 14px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-bottom: 1px solid #e6e6e6;
 }
 
 .page-header__logo {
@@ -13,36 +24,103 @@
   height: 38px;
 }
 
+.page-header__toggle-menu {
+  position: relative;
+  width: 24px;
+  height: 18px;
+  margin-left: auto;
+  background-color: @white;
+  border: none;
+  cursor: pointer;
+}
+
+.page-header__toggle-menu--closed::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background-color: @black;
+  box-shadow: 0 8px 0 0 @black, 0 16px 0 0 @black;
+}
+
+.page-header__toggle-menu--opened {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background-color: @black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.page-header__toggle-menu--nojs {
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
+  .page-header {
+    margin-bottom: 0;
+  }
+
   .page-header__container {
     display: flex;
     justify-content: space-between;
     .tablet-container;
+    padding-top: 25px;
   }
 
-  .site-list {
-    width: 450px;
+  .page-header__toggle-menu {
+    display: none;
+  }
+
+  .page-header__top {
+    padding: 0;
+    border: none;
   }
 
   .page-header__logo {
     width: 173px;
     height: 58px;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-header {
-    background-image: url("../../img/index-background-desktop@1x.jpg");
+    margin-bottom: 82px;
+    background: url("../img/index-background-desktop@1x.jpg"), linear-gradient(to right, @white 50%, #64a83b 50%);
     background-position: right;
     background-repeat: no-repeat;
 
     &.page-header--inner {
+      margin-bottom: 61px;
       background: transparent;
     }
   }
 
   .page-header__container {
     .desktop-container;
+    padding-top: 54px;
   }
 
   .page-header__logo {

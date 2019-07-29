@@ -1,10 +1,9 @@
 .promo {
-  padding-top: 29px;
+  padding-top: 26px;
   text-align: center;
   color: @white;
-  background-color: #71b145;
-  background-image: url("../img/index-background-mobile@1x.jpg");
-  background-position: 0 0;
+  background-image: url("../img/index-can-mobile@1x.png"), url("../img/index-background-mobile@1x.jpg"), linear-gradient(to bottom, #64a83b 60%, @white 40%);
+  background-position: center 80%, center top;
   background-repeat: no-repeat;
 }
 
@@ -14,7 +13,7 @@
 
 .promo__title {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
@@ -24,56 +23,72 @@
 
 .promo__text {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 304px;
   font-size: 14px;
   line-height: 14px;
   font-family: "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
 }
 
-.promo__image {
-  margin: 0;
-}
-
 @media (min-width: @tablet-width) {
   .promo {
-    padding-top: 62px;
+    padding-top: 56px;
     padding-bottom: 529px;
     text-align: left;
     color: @font-dark;
     background: transparent;
+    background-image: url("../img/index-can-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
   }
 
   .promo__container {
     .tablet-container;
   }
 
+  .promo__wrapper {
+    padding-left: 88px;
+  }
+
   .promo__title {
-    margin-bottom: 46px;
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 43px;
     color: @font-dark;
   }
 
   .promo__text {
-    margin-bottom: 49px;
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 46px;
+  }
+
+  .promo__button {
+    width: 245px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .promo {
-    padding-top: 112px;
+    padding-top: 108px;
     padding-bottom: 186px;
+    background-image: url("../img/index-can-desktop@1x.png");
+    background-position: 63% 36%;
   }
 
   .promo__container {
     .desktop-container;
   }
 
+  .promo__wrapper {
+    padding-left: 80px;
+  }
 
   .promo__title {
-    margin-bottom: 37px;
+    margin-bottom: 42px;
   }
 
   .promo__text {
-    margin-bottom: 54px;
+    margin-bottom: 52px;
   }
 }
