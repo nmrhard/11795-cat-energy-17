@@ -35,7 +35,7 @@
 }
 
 .page-header__toggle-menu--closed::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -48,7 +48,7 @@
 .page-header__toggle-menu--opened {
   &::before,
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 8px;
     left: 0;
@@ -74,6 +74,7 @@
   .page-header {
     margin-bottom: 0;
   }
+
   .page-header__container {
     display: flex;
     justify-content: space-between;
@@ -107,11 +108,12 @@
 @media (min-width: @desktop-width) {
   .page-header {
     margin-bottom: 82px;
-    background-image: url("../../img/index-background-desktop@1x.jpg");
+    background: url("../../img/index-background-desktop@1x.jpg"), linear-gradient(to right, @white 50%, #64a83b 50%);
     background-position: right;
     background-repeat: no-repeat;
 
     &.page-header--inner {
+      margin-bottom: 61px;
       background: transparent;
     }
   }

@@ -3,7 +3,7 @@
   padding-top: 80px;
   padding-bottom: 24px;
 
-  &:before {
+  &::before {
     content: "";
     position: absolute;
     top: 26px;
@@ -14,7 +14,7 @@
     background: #d3d3d3;
   }
 
-  &:after {
+  &::after {
     content: "";
     position: absolute;
     top: 40px;
@@ -67,12 +67,12 @@
     border: 1px solid #e6e6e6;
     box-sizing: border-box;
 
-    &:before {
+    &::before {
       top: 54px;
       height: 60px;
     }
 
-    &:after {
+    &::after {
       top: 83px;
       width: 60px;
       margin-left: -30px;
@@ -109,5 +109,11 @@
     margin-top: 85px;
     padding-top: 10px;
     padding-bottom: 10px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .more-products__wrapper {
+    width: 169px;
   }
 }
