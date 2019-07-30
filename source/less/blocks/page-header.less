@@ -116,6 +116,13 @@
       margin-bottom: 61px;
       background: transparent;
     }
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background: url("../img/index-background-desktop@2x.jpg"), linear-gradient(to right, @white 50%, #64a83b 50%);
+      background-size: 720px auto, 100% auto;
+      background-position: right;
+      background-repeat: no-repeat;
+    }
   }
 
   .page-header__container {
