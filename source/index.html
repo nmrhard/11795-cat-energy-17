@@ -127,7 +127,7 @@
       </div>
     </section>
     <section class="example">
-      <div class="example__container columns">
+      <div class="example__container">
         <div class="example__result-text">
           <h2 class="example__title section-title">Живой пример</h2>
           <p class="example__description">
@@ -135,28 +135,46 @@
           </p>
           <div class="exapmle__numbers">
             <table class="example__result">
-              <tr>
+              <tr class="example__weight">
                 <td class="example__value">5 кг</td>
-                <td class="example__field">снижение веса</td>
+                <td class="example__field">
+                  снижение<br>
+                  веса
+                </td>
               </tr>
-              <tr>
+              <tr class="example__time">
                 <td class="example__value">60 дней</td>
-                <td class="example__field">затрачено времени</td>
+                <td class="example__field">
+                  затрачено<br>
+                  времени
+                </td>
               </tr>
             </table>
             <p class="example__cost">Затраты на питание: 15 000 руб.</p>
           </div>
         </div>
+      </div>
+      <div class="example__result-container">
         <div class="example__result-image">
-          <img class="example__cat-image" src="" width="320" height="240" alt="До программы похудения. Толстый кот неуклюже сидящий на задних лапах.">
-          <img class="example__cat-image" src="" width="320" height="240" alt="После программы похудения. Стройный кот сидящий на задних лапах.">
-          <div class="example__range">
-            <span class="example__range-text">Было</span>
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+            <img class="example__cat-image example__cat-image--before" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" width="320" height="240" alt="До программы похудения. Толстый кот неуклюже сидящий на задних лапах.">
+          </picture>
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tabler@2x.png 2x">
+            <img class="example__cat-image example__cat-image--after" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" width="320" height="240" alt="После программы похудения. Стройный кот сидящий на задних лапах.">
+          </picture>
+        </div>
+        <div class="example__range">
+          <button class="example__range-button">Было</button>
+          <div class="example__range-controls">
             <div class="example__scale">
-              <div class="example__bar"></div>
-            </div>
-            <span class="example__range-text">Стало</span>
+            <div class="example__bar"></div>
           </div>
+          </div>
+          <button class="example__range-button">Стало</button>
         </div>
       </div>
     </section>

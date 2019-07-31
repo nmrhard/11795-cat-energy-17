@@ -1,36 +1,73 @@
 .example {
+  padding-top: 16px;
+  padding-bottom: 35px;
   background-color: #e3e3e3;
 }
 
 .example__container {
   .mobile-container;
-  padding-top: 21px;
-  padding-bottom: 37px;
+  margin-bottom: 35px;
 }
 
 .example__description {
   margin: 0;
-  padding-top: 18px;
-  padding-bottom: 23px;
+  padding-top: 25px;
+  padding-bottom: 24px;
 }
 
 .example__result {
+  width: 100%;
+  margin-bottom: 33px;
+  border-collapse: collapse;
+}
+
+.example__result tbody {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
+.example__result tr {
+  position: relative;
+  display: inline-block;
+  padding-top: 13px;
+  padding-bottom: 17px;
+  font-size: 0;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
+}
+
+.example__weight {
+  padding-left: 42px;
+  padding-right: 41px;
+}
+
+.example__time {
+  padding-left: 19px;
+  padding-right: 21px;
+}
+
 .example__value {
+  padding: 0;
   font-size: 24px;
   line-height: 24px;
   font-family: "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
+  text-align: center;
   color: @font-dark;
 }
 
 .example__field {
+  position: absolute;
+  left: 50%;
+  bottom: -16px;
+  margin-left: -43px;
+  width: 87px;
+  padding: 0;
   font-size: 12px;
   line-height: 12px;
+  text-align: center;
+  background-color: #e3e3e3;
 }
 
 .example__cost {
@@ -39,15 +76,64 @@
   line-height: 20px;
   font-family: "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
+  text-align: center;
   color: @font-dark;
 }
 
-.example__range-text {
+.example__result-container {
+  width: 320px;
+  margin: 0 auto;
+}
+
+.example__result-image {
+  margin-bottom: 28px;
+}
+
+.example__cat-image--after {
+  display: none;
+}
+
+.example__range {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.example__range-button {
+  padding: 0;
   font-size: 16px;
   line-height: 20px;
   font-family: "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
   color: @font-dark;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.example__range-controls {
+  position: relative;
+  margin-left: 19px;
+  margin-right: 19px;
+}
+
+.example__scale {
+  width: 72px;
+  height: 6px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: @white;
+  border: 1px  solid #cdcdcd;
+  border-radius: 7px;
+}
+
+.example__bar {
+  width: 50%;
+  height: 6px;
+  background-color: #68b738;
+  border-radius: 3px;
 }
 
 @media (min-width: @tablet-width) {
