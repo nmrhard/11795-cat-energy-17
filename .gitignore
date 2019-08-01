@@ -11,3 +11,9 @@ npm-debug.*
 source/css/*.css
 source/css/*.map
 Thumbs.db
+source/img/cat-energy-catalog-desktop.jpg
+source/img/cat-energy-catalog-mobile.jpg
+source/img/cat-energy-catalog-tablet.jpg
+source/img/cat-energy-index-desktop.jpg
+source/img/cat-energy-index-mobile.jpg
+source/img/cat-energy-index-tablet.jpg
