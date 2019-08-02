@@ -64,6 +64,129 @@
     display: flex;
     justify-content: space-between;
   }
+
+  .example__result tr {
+    padding-top: 15px;
+    padding-bottom: 18px;
+  }
+
+  .example__weight {
+    padding-left: 56px;
+    padding-right: 57px;
+  }
+
+  .example__time {
+    padding-left: 29px;
+    padding-right: 29px;
+  }
+
+  .example__value {
+    font-size: 30px;
+    line-height: 37px;
+  }
+
+  .example__field {
+    bottom: -6px;
+    font-size: 14px;
+    line-height: 14px;
+    background-color: @white;
+  }
+
+  .example__time .example__field {
+    width: 143px;
+    margin-left: -72px;
+  }
+
+  .example__weight .example__field {
+    width: 114px;
+    margin-left: -57px;
+  }
+
+  .example__new-line {
+    display: none;
+  }
+
+  .example__cost {
+    width: 175px;
+    padding-top: 7px;
+    font-size: 20px;
+    line-height: 29px;
+    text-align: right;
+  }
+
+  .example__result-image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
+  .example__cat-image--after {
+    display: inline;
+  }
+
+  .example__before,
+  .exmaple__after {
+    width: 48%;
+    overflow: hidden;
+  }
+
+  .exmaple__after {
+    text-indent: -100%;
+  }
+
+  :-ms-fullscreen,
+  :root .exmaple__after--ie11up {
+    text-indent: -48%;
+  }
+
+  :-ms-fullscreen,
+  :root .example__cat-image {
+    max-width: none;
+  }
+
+  .example__cat-image {
+    width: auto;
+    max-width: initial;
+  }
+
+  .example__range-button {
+    padding-bottom: 5px;
+    font-size: 20px;
+    line-height: 20px;
+    border-bottom: 1px dotted #bebebe;
+  }
+
+  .example__range-controls {
+    margin-left: 22px;
+    margin-right: 22px;
+  }
+
+  .example__scale {
+    width: 428px;
+    height: 6px;
+    padding: 0;
+    background-color: #dcdcdc;
+    border: none;
+    border-radius: 3px;
+  }
+
+  .example__bar {
+    display: none;
+  }
+
+  .example__toggle {
+    position: absolute;
+    top: -14px;
+    left: 47%;
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: #68b738;
+    border: 11px solid @white;
+    border-radius: 50%;
+    box-shadow: 0 0 1px 1px #cdcdcd, 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+  }
 }
 
 @media (min-width: @desktop-width) {
