@@ -146,7 +146,7 @@
       </div>
       <section class="map">
         <h2 class="visually-hidden">Карта проезда</h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6006747577262!2d30.32339540173705!3d59.93876812541997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0ZbRjywgMTkxMTg2!5e0!3m2!1suk!2sua!4v1560416735074!5m2!1suk!2sua" width="100%" height="400" style="border:0" allowfullscreen></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6006747577262!2d30.32339540173705!3d59.93876812541997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0ZbRjywgMTkxMTg2!5e0!3m2!1suk!2sua!4v1560416735074!5m2!1suk!2sua" height="400" style="border:0; width:100%;" allowfullscreen></iframe>
         <p>
           <img src="img/map.jpg" width="320" height="400" alt="Адрес офиса компании город Санкт-Петербург улица Большая Конюшенная дом 19/8.">
         </p>
@@ -155,26 +155,40 @@
   </main>
   <footer class="page-footer">
     <div class="page-footer__container">
-      <a href="index.html" class="page-footer__logo">
-        <img class="page-footer__logo-image" src="" width="128" height="24" alt="Кэт энерджи.">
+      <a class="page-footer__logo">
+        <img class="page-footer__logo-image" src="img/logo-footer.svg" width="128" height="24" alt="Кэт энерджи.">
       </a>
       <div class="page-footer__social social">
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link social__link-vkontakte" href="https://vk.com/htmlacademy" aria-label="Страница Кэт энерджи в Вконтакте"></a>
+            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy" aria-label="Страница Кэт энерджи в Вконтакте">
+              <svg class="social__vkontakte-icon" width="22" height="12" role="img">
+                <use xlink:href="img/sprite.svg#icon-vk"></use>
+              </svg>
+            </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link-instagram" href="https://www.instagram.com/htmlacademy" aria-label="Страница Кэт энерджи в Инстаграм"></a>
+            <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy" aria-label="Страница Кэт энерджи   в Инстаграм">
+              <svg class="social__instagram-icon" width="16" height="16" role="img">
+                <use xlink:href="img/sprite.svg#icon-insta"></use>
+              </svg>
+            </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link-facebook" href="https://www.facebook.com/htmlacademy" aria-label="Страница Кэт энерджи в Фейсбук"></a>
+            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy" aria-label="Страница Кэт энерджи в Фейсбук">
+              <svg class="social__facebook-icon" width="10" height="19" role="img">
+                <use xlink:href="img/sprite.svg#icon-fb"></use>
+              </svg>
+            </a>
           </li>
         </ul>
       </div>
       <div class="page-footer__copyright copyright">
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          HTML Academy
-          <img src="" width="27" height="34" alt="Логотип компании HTML Academy">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML академия.Все права защищены.">
+          <span class="copyright__company">HTML Academy</span>
+          <svg class="copyright__logo" width="27" height="34" role="img">
+            <use xlink:href="img/sprite.svg#icon-academy"></use>
+          </svg>
         </a>
       </div>
     </div>
