@@ -4,18 +4,44 @@
   margin: 0 auto;
   background-image: url("../img/bg-map-mobile@1x.png");
   background-repeat: no-repeat;
-  background-size: 363px auto;
+  background-size: cover;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .map {
     background: url("../img/bg-map-mobile@2x.png");
     background-repeat: no-repeat;
-    background-size: 363px auto;
+    background-size: cover;
   }
 }
 
 @media (min-width: @tablet-width) {
   .map {
     height: 396px;
+    background-image: url("../img/bg-map-tablet@1x.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .map {
+      background: url("../img/bg-map-tablet@2x.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .map {
+    height: 401px;
+    background-image: url("../img/bg-map-desktop@1x.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .map {
+      background: url("../img/bg-map-desktop@2x.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
   }
 }
