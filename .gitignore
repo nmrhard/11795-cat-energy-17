@@ -8,9 +8,8 @@
 *.sublime*
 node_modules/
 npm-debug.*
-source/css/*.css
-source/css/*.map
 Thumbs.db
+build/
 source/img/cat-energy-catalog-desktop.jpg
 source/img/cat-energy-catalog-mobile.jpg
 source/img/cat-energy-catalog-tablet.jpg

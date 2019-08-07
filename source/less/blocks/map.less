@@ -1,6 +1,17 @@
 .map {
   width: 100%;
+  height: 363px;
   margin: 0 auto;
+  background-image: url("../img/bg-map-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-size: 363px auto;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .map {
+    background: url("../img/bg-map-mobile@2x.png");
+    background-repeat: no-repeat;
+    background-size: 363px auto;
+  }
 }
 
 @media (min-width: @tablet-width) {
