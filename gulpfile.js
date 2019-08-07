@@ -79,5 +79,6 @@ gulp.task("server", function () {
   gulp.watch("build/*.html").on("change", server.reload);
 });
 
-gulp.task("start", gulp.series("css", "server"));
 gulp.task("build", gulp.series("clean", "copy", "css"));
+gulp.task("start", gulp.series("build", "server"));
+
