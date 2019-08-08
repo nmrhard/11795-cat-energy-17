@@ -10,6 +10,8 @@ node_modules/
 npm-debug.*
 Thumbs.db
 build/
+source/css/*.css
+source/css/*.map
 source/img/cat-energy-catalog-desktop.jpg
 source/img/cat-energy-catalog-mobile.jpg
 source/img/cat-energy-catalog-tablet.jpg
