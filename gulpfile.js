@@ -24,7 +24,7 @@ gulp.task("css", function () {
     .pipe(csso())
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("build/css"))
+    .pipe(gulp.dest("source/css"))
     .pipe(server.stream());
 });
 
@@ -58,6 +58,7 @@ gulp.task("copy", function(){
     "source/img/**",
     "source/js/**",
     "source/*.html",
+    "source/css/**",
     "source/*.ico"
   ], {
     base: "source"
@@ -67,7 +68,7 @@ gulp.task("copy", function(){
 
 gulp.task("server", function () {
   server.init({
-    server: "build/",
+    server: "source/",
     notify: false,
     open: true,
     cors: true,
@@ -75,8 +76,8 @@ gulp.task("server", function () {
   });
 
   gulp.watch("source/less/**/*.less", gulp.series("css"));
-  gulp.watch("source/img/icon-*.svg").on("change", server.reload);
-  gulp.watch("build/*.html").on("change", server.reload);
+  gulp.watch("source/img/*.svg").on("change", server.reload);
+  gulp.watch("source/*.html").on("change", server.reload);
 });
 
 gulp.task("build", gulp.series("clean", "copy", "css"));
