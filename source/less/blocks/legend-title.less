@@ -1,6 +1,37 @@
 .legend-title {
+  position: relative;
+  width: 100%;
+  margin-bottom: 34px;
   font-size: 24px;
   line-height: 24px;
   font-family: "Oswald", "Arial", sans-serif;
-  color: @font-light;
+  color: @font-dark;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: -20px;
+    top: 29%;
+    width: 99px;
+    height: 3px;
+    background: #68b738;
+  }
+}
+
+.legend-title--comment {
+  margin-bottom: 36px;
+
+  &::after {
+    top: 60%;
+    width: 158px;
+  }
+}
+
+.legend-title--extra-prod {
+  margin-bottom: 40px;
+
+  &::after {
+    top: 60%;
+    width: 136px;
+  }
 }

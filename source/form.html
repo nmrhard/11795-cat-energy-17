@@ -1,6 +1,34 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+  <style>
+    HTML {
+      background-repeat: no-repeat;
+      background-position:  50% 0;
+      /* По умолчанию мобильный макет */
+      background-image: url( "img/cat-energy-form-mobile.jpg" );
+    }
+    /* Планшет */
+    @media ( min-width: 768px ) {
+      HTML {
+        /* Планшетный макет */
+        background-image: url( "img/cat-energy-form-tablet.jpg" );
+      }
+    }
+    /* Десктоп */
+    @media ( min-width: 1300px ) {
+      HTML {
+        /* Десктопный макет */
+        background-image: url( "img/cat-energy-form-desktop.jpg");
+      }
+    }
+
+    BODY {
+      opacity: 1;
+    }
+  </style>
+  <link rel="stylesheet" href="../node_modules/pixel-glass/styles.css">
+  <script src="../node_modules/pixel-glass/script.js"></script>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -34,110 +62,113 @@
   </header>
   <main class="page-inner">
     <div class="page_inner__container">
-      <h1 class="page-title">Подбор программы</h1>
+      <h1 class="page-title page-title--questionnaire">Подбор программы</h1>
       <p class="page-inner__instruction">
         Заполните анкету и мы подберем<br>
         программу питания для вашего кота
       </p>
     </div>
     <section class="questionnaire">
-      <div class="questionnaire__container">
-        <h2 class="visually-hidden">Анкета</h2>
-        <form class="questionnaire__data" method="post" action="https://echo.htmlacademy.ru">
-          <div class="questionnaire__columns">
-            <fieldset class="questionnaire__general-info">
-              <div class="questionnarie__wrapper">
-                <legend class="visually-hidden">Данные кота</legend>
-                <p class="form-group">
-                  <label class="form-label" for="cat-name">Имя:*</label>
-                  <input class="data-input" id="cat-name" type="text" name="name" placeholder="Барсик" required>
-                </p>
-                <p class="form-group">
-                  <label class="form-label" for="cat-weight">Вес (кг):*</label>
-                  <input class="data-input" id="cat-weight" type="text" name="weight" placeholder="7" required>
-                </p>
-                <p class="form-group">
-                  <label class="form-label" for="cat-age">Возраст (лет):</label>
-                  <input class="data-input" id="cat-age" type="text" name="age" placeholder="7">
-                </p>
-              </div>
-            </fieldset>
-            <fieldset class="questionnaire__programm">
-              <div class="questionnarie__wrapper">
-                <legend class="visually-hidden">Выбор программы</legend>
-                <ul class="questionnaire__programm-list">
-                  <li class="questionnaire__filter-programm">
-                    <input class="questionnaire__filter-radio" type="radio" name="programm" value="weight-lose" id="filter-weight-lose" checked>
-                    <label class="form-label" for="filter-weight-lose">Похудение</label>
-                  </li>
-                  <li class="questionnaire__filter-programm">
-                    <input class="questionnaire__filter-radio" type="radio" name="programm" value="weight-gain" id="filter-weight-gain">
-                    <label class="form-label" for="filter-weight-gain">Набор массы</label>
-                  </li>
-                  <li class="questionnaire__filter-programm">
-                    <input class="questionnaire__filter-radio" type="radio" name="programm" value="advice" id="filter-advice">
-                    <label class="form-label" for="filter-advice">Не знаю (Нужен ваш совет)</label>
-                  </li>
-                </ul>
-              </div>
-            </fieldset>
+      <h2 class="visually-hidden">Анкета</h2>
+      <form class="questionnaire__data" method="post" action="https://echo.htmlacademy.ru">
+        <div class="questionnaire__columns">
+          <fieldset class="questionnaire__general-info">
+            <div class="questionnaire__container">
+              <legend class="visually-hidden">Данные кота</legend>
+              <p class="form-group">
+                <label class="form-label" for="cat-name">Имя:*</label>
+                <input class="data-input" id="cat-name" type="text" name="name" placeholder="Барсик" required>
+              </p>
+              <p class="form-group">
+                <label class="form-label" for="cat-weight">Вес (кг):*</label>
+                <input class="data-input" id="cat-weight" type="text" name="weight" placeholder="7" required>
+              </p>
+              <p class="form-group">
+                <label class="form-label" for="cat-age">Возраст (лет):</label>
+                <input class="data-input" id="cat-age" type="text" name="age" placeholder="7">
+              </p>
+            </div>
+          </fieldset>
+          <fieldset class="questionnaire__programm">
+            <legend class="visually-hidden">Выбор программы</legend>
+            <ul class="questionnaire__programm-list">
+              <li class="questionnaire__filter-programm">
+                <input class="visually-hidden questionnaire__filter-radio" type="radio" name="programm" value="weight-lose" id="filter-weight-lose" checked>
+                <label class="form-label" for="filter-weight-lose">Похудение</label>
+              </li>
+              <li class="questionnaire__filter-programm">
+                <input class="visually-hidden questionnaire__filter-radio" type="radio" name="programm" value="weight-gain" id="filter-weight-gain">
+                <label class="form-label" for="filter-weight-gain">Набор массы</label>
+              </li>
+              <li class="questionnaire__filter-programm">
+                <input class="visually-hidden questionnaire__filter-radio" type="radio" name="programm" value="advice" id="filter-advice">
+                <label class="form-label" for="filter-advice">Не знаю (Нужен ваш совет)</label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+        <fieldset class="questionnaire__owner-info">
+          <div class="questionnaire__container">
+          <legend class="legend-title">Контактные данные (владельца кота)</legend>
+            <p class="form-group">
+              <label class="form-label" for="cat-owner-name">E-mail:*</label>
+              <input class="data-input" id="cat-owner-name" type="email" placeholder="kuklachev@gmail.com" required>
+              <svg class="questionnaire__icon-mail" width="17" height="13" arria-hidden="true">
+                <use xlink:href="img/sprite.svg#icon-mail"></use>
+              </svg>
+            </p>
+            <p class="form-group">
+              <label class="form-label" for="cat-owner-number">Телефон:*</label>
+              <input class="data-input" id="cat-owner-number" type="tel" placeholder="8 (960) 900-60-90" required>
+              <svg class="questionnaire__icon-phone" width="20" height="20" arria-hidden="true">
+                <use xlink:href="img/sprite.svg#icon-phone"></use>
+              </svg>
+            </p>
           </div>
-          <fieldset class="questionnaire__owner-info">
-            <div class="questionnarie__wrapper">
-              <legend class="legend-title">Контактные данные (владельца кота)</legend>
-              <div class="questionnaire__owner-wrapper">
-                <p class="questionnaire__owner-email form-group">
-                  <label class="form-label" for="cat-owner-name">E-mail:*</label>
-                  <input class="data-input" id="cat-owner-name" type="email" placeholder="kuklachev@gmail.com" required>
-                </p>
-                <p class="questionnaire__owner-tel form-group">
-                  <label class="form-label" for="cat-owner-number">Телефон:*</label>
-                  <input class="data-input" id="cat-owner-number" type="tel" placeholder="8 (960) 900-60-90" required>
-                </p>
-              </div>
-            </div>
-          </fieldset>
-          <fieldset class="questionnaire__comment">
-            <div class="questionnarie__wrapper">
-              <legend class="legend-title">Комментарий</legend>
-              <textarea class="questionnaire__comment-text" name="about-cat" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
-            </div>
-          </fieldset>
-          <fieldset class="questionnaire__extra-products">
-            <div class="questionnarie__wrapper">
-              <legend class="legend-title">Дополнительно</legend>
-              <ul class="questionnaire__extra-data-list">
-                <li class="questionnaire__filter-extra">
-                  <input class="questionnaire__filter-checkbox" type="checkbox" name="sweetner" id="filter-sweetner" checked>
-                  <label class="form-label" for="filter-sweetner">Сахарозаменитель</label>
-                </li>
-                <li class="questionnaire__filter-extra">
-                  <input class="questionnaire__filter-checkbox" type="checkbox" name="water" id="filter-water">
-                  <label class="form-label" for="filter-water">Питьевая вода</label>
-                </li>
-                <li class="questionnaire__filter-extra">
-                  <input class="questionnaire__filter-checkbox" type="checkbox" name="milk" id="filter-milk">
-                  <label class="form-label" for="filter-milk">Молоко</label>
-                </li>
-                <li class="questionnaire__filter-extra">
-                  <input class="questionnaire__filter-checkbox" type="checkbox" name="vitamins" id="filter-vitamins">
-                  <label class="form-label" for="filter-vitamins">Витамины</label>
-                </li>
-              </ul>
-            </div>
-          </fieldset>
-          <div class="questionnarie__wrapper">
-            <button class="questionnaire__button button" type="submit">Отправить заявку</button>
-            <p class="questionnaire__extra-info"><small class="questionnaire__legend"><sup>*</sup> — Обязательные поля</small></p>
+        </fieldset>
+        <fieldset class="questionnaire__comment">
+          <div class="questionnaire__container">
+            <legend class="legend-title legend-title--comment">Комментарий</legend>
+            <textarea class="questionnaire__comment-text" name="about-cat" placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
-        </form>
-      </div>
+        </fieldset>
+        <fieldset class="questionnaire__extra-products">
+          <div class="questionnaire__container">
+            <legend class="legend-title legend-title--extra-prod">Дополнительно</legend>
+            <ul class="questionnaire__extra-data-list">
+              <li class="questionnaire__filter-extra">
+                <input class="visually-hidden questionnaire__filter-checkbox" type="checkbox" name="sweetner" id="filter-sweetner" checked>
+                <label class="form-label" for="filter-sweetner">Сахарозаменитель</label>
+              </li>
+              <li class="questionnaire__filter-extra">
+                <input class="visually-hidden questionnaire__filter-checkbox" type="checkbox" name="water" id="filter-water">
+                <label class="form-label" for="filter-water">Питьевая вода</label>
+              </li>
+              <li class="questionnaire__filter-extra">
+                <input class="visually-hidden questionnaire__filter-checkbox" type="checkbox" name="milk" id="filter-milk">
+                <label class="form-label" for="filter-milk">Молоко</label>
+              </li>
+              <li class="questionnaire__filter-extra">
+                <input class="visually-hidden questionnaire__filter-checkbox" type="checkbox" name="vitamins" id="filter-vitamins">
+                <label class="form-label" for="filter-vitamins">Витамины</label>
+              </li>
+            </ul>
+          </div>
+        </fieldset>
+        <div class="questionnaire__container">
+          <button class="questionnaire__button button" type="submit">Отправить заявку</button>
+          <p class="questionnaire__extra-info"><small class="questionnaire__legend"><sup>*</sup> — Обязательные поля</small></p>
+        </div>
+      </form>
     </section>
     <section class="cooperation">
       <div class="cooperation__container">
         <h2 class="visually-hidden">Сотрудничество</h2>
         <div class="cooperation__wrapper">
-          <p class="cooperation__text">приглашаем к сотрудничеству дилеров!</p>
+          <p class="cooperation__text">
+            приглашаем <br>
+            к сотрудничеству дилеров!
+          </p>
           <address class="cooperation__address">
             ул. Большая Конюшенная, д. 19/8
             Санкт-Петербург
@@ -146,10 +177,8 @@
       </div>
       <section class="map">
         <h2 class="visually-hidden">Карта проезда</h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6006747577262!2d30.32339540173705!3d59.93876812541997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0ZbRjywgMTkxMTg2!5e0!3m2!1suk!2sua!4v1560416735074!5m2!1suk!2sua" height="400" style="border:0; width:100%;" allowfullscreen></iframe>
-        <p>
-          <img src="img/map.jpg" width="320" height="400" alt="Адрес офиса компании город Санкт-Петербург улица Большая Конюшенная дом 19/8.">
-        </p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6006747577262!2d30.32339540173705!3d59.93876812541997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0ZbRjywgMTkxMTg2!5e0!3m2!1suk!2sua!4v1560416735074!5m2!1suk!2sua" height="100%" style="border:0; width:100%;" allowfullscreen>
+        </iframe>
       </section>
     </section>
   </main>
@@ -193,6 +222,11 @@
       </div>
     </div>
   </footer>
+  <script>
+    document.createElement( "picture" );
+  </script>
+  <script src="js/picturefill.min.js" async></script>
+  <script src="js/svgxuse.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
