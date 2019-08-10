@@ -35,3 +35,39 @@
     width: 136px;
   }
 }
+
+@media (min-width: @tablet-width) {
+  .legend-title {
+    margin-bottom: 76px;
+    font-size: 36px;
+    line-height: 36px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -71px;
+      top: 63%;
+      width: 30px;
+      height: 3px;
+      background: #68b738;
+    }
+
+    &::after {
+      top: 63%;
+      right: -67px;
+      width: 145px;
+    }
+  }
+
+  .legend-title--comment::after {
+    width: 479px;
+  }
+
+  .legend-title--extra-prod {
+    margin-bottom: 67px;
+
+    &::after {
+      width: 445px;
+    }
+  }
+}

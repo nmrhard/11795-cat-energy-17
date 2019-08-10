@@ -69,3 +69,47 @@
   border-right-style: none;
   transform: rotate(-48deg);
 }
+
+@media (min-width: @tablet-width) {
+  .form-label {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .questionnaire__general-info .form-label {
+    flex-shrink: 0;
+    margin-right: 16px;
+    cursor: pointer;
+  }
+
+  .questionnaire__filter-radio + .form-label::before {
+    width: 37px;
+    height: 37px;
+    top: -9px;
+    left: -59px;
+  }
+
+  .questionnaire__filter-radio:checked + .form-label::after {
+    top: 3px;
+    left: -47px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .questionnaire__owner-info .form-label {
+    flex-shrink: 0;
+    margin-right: 16px;
+    cursor: pointer;
+  }
+
+  .questionnaire__filter-checkbox + .form-label::before {
+    top: -10px;
+    left: -58px;
+    width: 38px;
+    height: 38px;
+  }
+
+  .questionnaire__filter-checkbox:checked + .form-label::after {
+    left: -47px;
+  }
+}

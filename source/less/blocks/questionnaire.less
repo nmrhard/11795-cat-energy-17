@@ -8,14 +8,14 @@
 
 .questionnaire__general-info {
   margin: 0;
-  margin-bottom: 9px;
+  margin-bottom: 23px;
   padding: 0;
   border: none;
 }
 
 .questionnaire__owner-info {
   margin: 0;
-  margin-bottom: 13px;
+  margin-bottom: 27px;
   padding: 0;
   padding-top: 28px;
   border: none;
@@ -76,7 +76,7 @@
   width: 100%;
   min-height: 150px;
   padding-top: 12px;
-  padding-left: 16px;
+  padding-left: 14px;
   font-size: 16px;
   line-height: 18px;
   font-family: "Oswald", "Arial", sans-serif;
@@ -120,8 +120,13 @@
 .questionnaire__extra-info {
   margin: 0;
   margin-top: 20px;
-  margin-bottom: 32px;
+  margin-bottom: 30px;
   text-align: center;
+}
+
+.questionnaire__button {
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .questionnaire__legend {
@@ -132,24 +137,94 @@
 @media (min-width: @tablet-width) {
   .questionnaire__container {
     .tablet-container;
+    padding-left: 41px;
+    padding-right: 37px;
+    box-sizing: border-box;
   }
 
-  .questionnarie__wrapper {
-    padding-left: 42px;
+  .questionnaire__data {
+    margin-top: 65px;
+    margin-bottom: 75px;
+  }
+
+  .questionnaire__general-info {
+    margin-bottom: 71px;
+  }
+
+  .questionnaire__programm {
+    width: 630px;
+    padding-top: 33px;
+    padding-bottom: 35px;
+    padding-left: 0;
+    box-sizing: border-box;
+  }
+
+  .questionnaire__filter-programm {
+    padding-left: 88px;
+    margin-bottom: 33px;
+  }
+
+  .questionnaire__owner-info {
+    padding-top: 74px;
+    margin-bottom: 65px;
+  }
+
+  .questionnaire__comment {
+    margin-bottom: 60px;
+  }
+
+  .questionnaire__comment-text {
+    min-height: 175px;
+    padding-top: 14px;
+    padding-left: 17px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .questionnaire__extra-products {
+    margin-bottom: 64px;
   }
 
   .questionnaire__extra-data-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0;
     font-size: 0;
   }
 
   .questionnaire__filter-extra {
-    display: inline-block;
-    width: 284px;
-    margin-right: 60px;
+    width: 238px;
+    margin-right: 106px;
+    margin-bottom: 51px;
+    padding-left: 57px;
+    box-sizing: border-box;
 
     &:nth-child(2n) {
       margin-right: 0;
     }
+
+    &:nth-last-child(1),
+    &:nth-last-child(2) {
+      margin-bottom: 0;
+    }
+  }
+
+  .questionnaire__button {
+    display: inline-block;
+    width: auto;
+    margin-right: 55px;
+    padding-left: 63px;
+    padding-right: 67px;
+    font-size: 20px
+  }
+
+  .questionnaire__extra-info {
+    display: inline-block;
+    margin: 0;
+  }
+
+  .questionnaire__legend {
+    font-size: 16px;
   }
 }
 
