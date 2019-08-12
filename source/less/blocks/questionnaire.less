@@ -56,6 +56,21 @@
   margin-top: -6px;
 }
 
+.data-input:valid + .questionnaire__icon-mail,
+.data-input:valid + .questionnaire__icon-phone {
+  fill: #222222;
+}
+
+.data-input:focus + .questionnaire__icon-mail,
+.data-input:focus + .questionnaire__icon-phone {
+  fill: #68b738;
+}
+
+.questionnaire__icon-mail--error,
+.questionnaire__icon-phone-error {
+  fill: #ff8282;
+}
+
 .questionnaire__icon-phone {
   position: absolute;
   right: 13px;
@@ -84,6 +99,11 @@
   border: 1px solid #e6e6e6;
   color: @font-light;
   box-sizing: border-box;
+
+  &:active,
+  &:focus {
+    outline: 2px solid #444444;
+  }
 }
 
 .questionnaire__comment-text::placeholder {
@@ -209,17 +229,20 @@
     }
   }
 
+  .questionnaire__wrapper-send {
+    display: flex;
+    align-items: center;
+  }
+
   .questionnaire__button {
-    display: inline-block;
     width: auto;
-    margin-right: 55px;
+    margin-right: 62px;
     padding-left: 63px;
     padding-right: 67px;
     font-size: 20px
   }
 
   .questionnaire__extra-info {
-    display: inline-block;
     margin: 0;
   }
 
@@ -229,13 +252,29 @@
 }
 
 @media (min-width: @desktop-width) {
-  .questionnaire__container {
+  .questionnaire__container,
+  .questionnaire__columns {
     .desktop-container;
+    margin: 0 auto;
+    box-sizing: content-box;
   }
 
-  .questionnarie__wrapper {
-    width: auto;
-    padding-left: 0;
+  .questionnaire__data {
+    margin-bottom: 82px;
+  }
+
+  .questionnaire__columns .questionnaire__container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .questionnaire__programm {
+    margin: 0;
+  }
+
+  .questionnaire__filter-programm {
+    padding-left: 86px;
   }
 
   .questionnaire__columns {
@@ -243,8 +282,18 @@
     justify-content: space-between;
   }
 
-  .questionnaire__extra-data-list {
-    font-size: 0;
+  .questionnaire__general-info {
+    margin-bottom: 0;
+  }
+
+  .questionnaire__owner-info {
+    padding-top: 67px;
+    margin-bottom: 68px;
+  }
+
+  .questionnaire__wrapper {
+    display: flex;
+    justify-content: space-between;
   }
 
   .questionnaire__general-info {
@@ -255,21 +304,36 @@
     width: 570px;
   }
 
-  .questionnaire__owner-wrapper {
-    display: flex;
-    justify-content: space-between;
+  .questionnaire__owner-info .form-group {
+    width: 570px;
+    margin: 0;
   }
 
-  .questionnaire__owner-email {
-    width: 570px;
+  .questionnaire__icon-phone {
+    right: 19px;
   }
 
-  .questionnaire__owner-tel {
-    width: 570px;
+  .questionnaire__icon-mail {
+    right: 21px;
+  }
+
+  .questionnaire__comment {
+    margin-bottom: 62px;
   }
 
   .questionnaire__comment-text {
     width: 100%;
+  }
+
+  .questionnaire__extra-products {
+    margin-bottom: 20px;
+  }
+
+  .questionnaire__button {
+    width: 570px;
+    margin-right: 81px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .questionnaire__filter-extra {

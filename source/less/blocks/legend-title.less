@@ -71,3 +71,26 @@
     }
   }
 }
+
+@media (min-width: @desktop-width) {
+  .legend-title {
+
+    &::before {
+      left: -110px;
+      width: 70px;
+    }
+
+    &::after {
+      right: -100px;
+      width: 769px;
+    }
+  }
+
+  .legend-title--comment::after {
+    width: 1102px;
+  }
+
+  .legend-title--extra-prod::after {
+    width: 1070px;
+  }
+}
