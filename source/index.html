@@ -1,34 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <style>
-    HTML {
-      background-repeat: no-repeat;
-      background-position:  50% 0;
-      /* По умолчанию мобильный макет */
-      background-image: url( "img/cat-energy-index-mobile.jpg" );
-    }
-    /* Планшет */
-    @media ( min-width: 768px ) {
-      HTML {
-        /* Планшетный макет */
-        background-image: url( "img/cat-energy-index-tablet.jpg" );
-      }
-    }
-    /* Десктоп */
-    @media ( min-width: 1300px ) {
-      HTML {
-        /* Десктопный макет */
-        background-image: url( "img/cat-energy-index-desktop.jpg");
-      }
-    }
-
-    BODY {
-      opacity: .5;
-    }
-  </style>
-  <link rel="stylesheet" href="../node_modules/pixel-glass/styles.css">
-  <script src="../node_modules/pixel-glass/script.js"></script>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -197,14 +169,14 @@
             приглашаем <br>
             к сотрудничеству дилеров!</p>
           <address class="cooperation__address">
-           <span>ул. Большая Конюшенная, д. 19/8</span>
+            <span>ул. Большая Конюшенная, д. 19/8</span>
             <span>Санкт-Петербург</span>
           </address>
         </div>
       </div>
       <section class="map">
         <h2 class="visually-hidden">Карта проезда</h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6006747577262!2d30.32339540173705!3d59.93876812541997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0ZbRjywgMTkxMTg2!5e0!3m2!1suk!2sua!4v1560416735074!5m2!1suk!2sua" height="100%" style="border:0; width:100%;" allowfullscreen>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6006747577262!2d30.32339540173705!3d59.93876812541997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0ZbRjywgMTkxMTg2!5e0!3m2!1suk!2sua!4v1560416735074!5m2!1suk!2sua" style="border:0; width:100%; height: 100%" allowfullscreen>
         </iframe>
       </section>
     </section>
@@ -249,11 +221,8 @@
       </div>
     </div>
   </footer>
-  <script>
-    document.createElement( "picture" );
-  </script>
+  <script src="js/main.js"></script>
   <script src="js/picturefill.min.js" async></script>
   <script src="js/svgxuse.min.js"></script>
-  <script src="js/main.js"></script>
 </body>
 </html>
