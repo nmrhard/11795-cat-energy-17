@@ -1,3 +1,24 @@
 .form-group {
   margin: 0;
+  margin-bottom: 14px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.questionnaire__general-info .form-group,
+.questionnaire__owner-info .form-group {
+  display: flex;
+  align-items: center;
+}
+
+.questionnaire__owner-info .form-group {
+  position: relative;
+}
+
+@media (min-width: @tablet-width) {
+  .form-group {
+    margin-bottom: 21px;
+  }
 }

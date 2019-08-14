@@ -2,6 +2,10 @@
   .mobile-container;
 }
 
+.questionnaire__data {
+  margin-top: 40px;
+}
+
 .questionnaire__general-info {
   margin: 0;
   margin-bottom: 23px;
@@ -11,17 +15,21 @@
 
 .questionnaire__owner-info {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 27px;
   padding: 0;
-  padding-top: 30px;
+  padding-top: 28px;
   border: none;
 }
 
 .questionnaire__programm {
-  margin: 0;
-  margin-bottom: 21px;
-  padding: 0;
-  border: none;
+  width: 320px;
+  margin: 0 auto;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 1px solid #ededed;
+  box-sizing: border-box;
 }
 
 .questionnaire__programm-list {
@@ -30,28 +38,81 @@
   list-style-type: none;
 }
 
+.questionnaire__filter-programm {
+  margin-bottom: 25px;
+  padding-left: 45px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.questionnaire__icon-mail {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  width: 17px;
+  height: 13px;
+  margin-top: -6px;
+}
+
+.data-input:valid + .questionnaire__icon-mail,
+.data-input:valid + .questionnaire__icon-phone {
+  fill: #222222;
+}
+
+.data-input:focus + .questionnaire__icon-mail,
+.data-input:focus + .questionnaire__icon-phone {
+  fill: #68b738;
+}
+
+.questionnaire__icon-mail--error,
+.questionnaire__icon-phone-error {
+  fill: #ff8282;
+}
+
+.questionnaire__icon-phone {
+  position: absolute;
+  right: 13px;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+}
+
 .questionnaire__comment {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   padding: 0;
   border: none;
 }
 
 .questionnaire__comment-text {
-  margin-top: 30px;
-}
-
-.questionnaire__comment-text::placeholder {
+  width: 100%;
+  min-height: 150px;
+  padding-top: 12px;
+  padding-left: 14px;
   font-size: 16px;
   line-height: 18px;
   font-family: "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
+  border: 1px solid #e6e6e6;
+  color: @font-light;
+  box-sizing: border-box;
+
+  &:active,
+  &:focus {
+    outline: 2px solid #444444;
+  }
+}
+
+.questionnaire__comment-text::placeholder {
   color: @font-light;
 }
 
 .questionnaire__extra-products {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 39px;
   padding: 0;
   border: none;
 }
@@ -62,7 +123,19 @@
   list-style-type: none;
 }
 
+.questionnaire__filter-extra {
+  margin-bottom: 25px;
+  padding-left: 46px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
 .questionnaire__button {
+  width: 100%;
+  font-size: 16px;
+  line-height: 20px;
   border: none;
 }
 
@@ -70,6 +143,7 @@
   margin: 0;
   margin-top: 20px;
   margin-bottom: 30px;
+  text-align: center;
 }
 
 .questionnaire__legend {
@@ -80,35 +154,125 @@
 @media (min-width: @tablet-width) {
   .questionnaire__container {
     .tablet-container;
+    padding-left: 41px;
+    padding-right: 37px;
+    box-sizing: border-box;
   }
 
-  .questionnarie__wrapper {
-    padding-left: 42px;
+  .questionnaire__data {
+    margin-top: 65px;
+    margin-bottom: 75px;
+  }
+
+  .questionnaire__general-info {
+    margin-bottom: 71px;
+  }
+
+  .questionnaire__programm {
+    width: 630px;
+    padding-top: 33px;
+    padding-bottom: 35px;
+    padding-left: 0;
+    box-sizing: border-box;
+  }
+
+  .questionnaire__filter-programm {
+    padding-left: 88px;
+    margin-bottom: 33px;
+  }
+
+  .questionnaire__owner-info {
+    padding-top: 74px;
+    margin-bottom: 65px;
+  }
+
+  .questionnaire__comment {
+    margin-bottom: 60px;
+  }
+
+  .questionnaire__comment-text {
+    min-height: 175px;
+    padding-top: 14px;
+    padding-left: 17px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .questionnaire__extra-products {
+    margin-bottom: 64px;
   }
 
   .questionnaire__extra-data-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0;
     font-size: 0;
   }
 
   .questionnaire__filter-extra {
-    display: inline-block;
-    width: 284px;
-    margin-right: 60px;
+    width: 238px;
+    margin-right: 106px;
+    margin-bottom: 51px;
+    padding-left: 57px;
+    box-sizing: border-box;
 
     &:nth-child(2n) {
       margin-right: 0;
     }
+
+    &:nth-last-child(1),
+    &:nth-last-child(2) {
+      margin-bottom: 0;
+    }
+  }
+
+  .questionnaire__wrapper-send {
+    display: flex;
+    align-items: center;
+  }
+
+  .questionnaire__button {
+    width: auto;
+    margin-right: 62px;
+    padding-left: 63px;
+    padding-right: 67px;
+    font-size: 20px;
+  }
+
+  .questionnaire__extra-info {
+    margin: 0;
+  }
+
+  .questionnaire__legend {
+    font-size: 16px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .questionnaire__container {
+  .questionnaire__container,
+  .questionnaire__columns {
     .desktop-container;
+    margin: 0 auto;
+    box-sizing: content-box;
   }
 
-  .questionnarie__wrapper {
-    width: auto;
-    padding-left: 0;
+  .questionnaire__data {
+    margin-bottom: 82px;
+  }
+
+  .questionnaire__columns .questionnaire__container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .questionnaire__programm {
+    width: 570px;
+    margin: 0;
+  }
+
+  .questionnaire__filter-programm {
+    padding-left: 86px;
   }
 
   .questionnaire__columns {
@@ -116,33 +280,51 @@
     justify-content: space-between;
   }
 
-  .questionnaire__extra-data-list {
-    font-size: 0;
-  }
-
   .questionnaire__general-info {
     width: 570px;
+    margin-bottom: 0;
   }
 
-  .questionnaire__programm {
-    width: 570px;
+  .questionnaire__owner-info {
+    padding-top: 67px;
+    margin-bottom: 68px;
   }
 
-  .questionnaire__owner-wrapper {
+  .questionnaire__wrapper {
     display: flex;
     justify-content: space-between;
   }
 
-  .questionnaire__owner-email {
+  .questionnaire__owner-info .form-group {
     width: 570px;
+    margin: 0;
   }
 
-  .questionnaire__owner-tel {
-    width: 570px;
+  .questionnaire__icon-phone {
+    right: 19px;
+  }
+
+  .questionnaire__icon-mail {
+    right: 21px;
+  }
+
+  .questionnaire__comment {
+    margin-bottom: 62px;
   }
 
   .questionnaire__comment-text {
     width: 100%;
+  }
+
+  .questionnaire__extra-products {
+    margin-bottom: 20px;
+  }
+
+  .questionnaire__button {
+    width: 570px;
+    margin-right: 81px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .questionnaire__filter-extra {

@@ -1,7 +1,7 @@
 .example {
   padding-top: 16px;
   padding-bottom: 35px;
-  background-color: #e3e3e3;
+  background-color: #f2f2f2;
 }
 
 .example__container {
@@ -11,8 +11,8 @@
 
 .example__description {
   margin: 0;
-  padding-top: 25px;
-  padding-bottom: 23px;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .example__result {
@@ -67,7 +67,7 @@
   font-size: 12px;
   line-height: 12px;
   text-align: center;
-  background-color: #e3e3e3;
+  background-color: #f2f2f2;
 }
 
 .example__cost {
@@ -249,33 +249,23 @@
     margin-bottom: 16px;
   }
 
-  .example__cat-image--after {
-    display: inline;
-  }
-
   .example__before,
   .example__after {
-    width: 48%;
+    width: 330px;
     overflow: hidden;
   }
 
-  .example__after {
-    text-indent: -100%;
+  .example__cat-image--before {
+    min-width: 690px;
+    height: 517px;
+    margin-left: -8px;
   }
 
-  :-ms-fullscreen,
-  :root .example__after--ie11up {
-    text-indent: -48%;
-  }
-
-  :-ms-fullscreen,
-  :root .example__cat-image {
-    max-width: none;
-  }
-
-  .example__cat-image {
-    width: auto;
-    max-width: initial;
+  .example__cat-image--after {
+    display: block;
+    min-width: 690px;
+    height: 517px;
+    margin-left: -338px;
   }
 
   .example__range-button {
@@ -401,17 +391,15 @@
   }
 
   .example__before {
-    width: 77%;
+    width: 420px;
   }
 
-  .example__after {
-    width: 60%;
-    text-indent: -128%;
+  .example__cat-image--before {
+    margin-left: 0;
   }
 
-  :-ms-fullscreen,
-  :root .example__after--ie11up {
-    text-indent: -56%;
+  .example__cat-image--after {
+    margin-left: -364px;
   }
 
   .example__range {

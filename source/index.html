@@ -1,41 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <style>
-    HTML {
-      background-repeat: no-repeat;
-      background-position:  50% 0;
-      /* По умолчанию мобильный макет */
-      background-image: url( "img/cat-energy-index-mobile.jpg" );
-    }
-    /* Планшет */
-    @media ( min-width: 768px ) {
-      HTML {
-        /* Планшетный макет */
-        background-image: url( "img/cat-energy-index-tablet.jpg" );
-      }
-    }
-    /* Десктоп */
-    @media ( min-width: 1300px ) {
-      HTML {
-        /* Десктопный макет */
-        background-image: url( "img/cat-energy-index-desktop.jpg");
-      }
-    }
-
-    BODY {
-      opacity: .5;
-    }
-  </style>
-  <link rel="stylesheet" href="../node_modules/pixel-glass/styles.css">
-  <script src="../node_modules/pixel-glass/script.js"></script>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <script>
-    document.createElement( "picture" );
-  </script>
-  <script src="js/picturefill.min.js" async></script>
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -167,7 +137,7 @@
                 <img class="example__cat-image example__cat-image--before" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" width="320" height="240" alt="До программы похудения. Толстый кот неуклюже сидящий на задних лапах.">
               </picture>
             </div>
-            <div class="example__after example__after--ie11up">
+            <div class="example__after">
               <picture>
                 <source type="image/webp" media="(min-width: 1300px)" srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/after-tablet@1x.webp 1x, img/after-tablet@2x.webp 2x">
@@ -201,14 +171,15 @@
             приглашаем <br>
             к сотрудничеству дилеров!</p>
           <address class="cooperation__address">
-            ул. Большая Конюшенная, д. 19/8
-            Санкт-Петербург
+            <span>ул. Большая Конюшенная, д. 19/8</span>
+            <span>Санкт-Петербург</span>
           </address>
         </div>
       </div>
       <section class="map">
         <h2 class="visually-hidden">Карта проезда</h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6006747577262!2d30.32339540173705!3d59.93876812541997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0ZbRjywgMTkxMTg2!5e0!3m2!1suk!2sua!4v1560416735074!5m2!1suk!2sua" height="363" style="border:0; width:100%;" allowfullscreen></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6006747577262!2d30.32339540173705!3d59.93876812541997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0ZbRjywgMTkxMTg2!5e0!3m2!1suk!2sua!4v1560416735074!5m2!1suk!2sua" style="border:0; width:100%; height: 100%" allowfullscreen>
+        </iframe>
       </section>
     </section>
   </main>
@@ -220,22 +191,22 @@
       <div class="page-footer__social social">
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy" aria-label="Страница Кэт энерджи в Вконтакте" aria-hidden="true">
-              <svg class="social__vkontakte-icon" width="22" height="12" aria-hidden="true">
+            <a class="social__link" href="https://vk.com/htmlacademy" aria-label="Страница Кэт энерджи в Вконтакте" aria-hidden="true">
+              <svg class="social__link--vkontakte" width="22" height="12" role="img">
                 <use xlink:href="img/sprite.svg#icon-vk"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy" aria-label="Страница Кэт энерджи   в Инстаграм">
-              <svg class="social__instagram-icon" width="16" height="16" aria-hidden="true">
+            <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy" aria-label="Страница Кэт энерджи в Инстаграм">
+              <svg class="social__link--instagram" width="16" height="16" role="img">
                 <use xlink:href="img/sprite.svg#icon-insta"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy" aria-label="Страница Кэт энерджи в Фейсбук">
-              <svg class="social__facebook-icon" width="10" height="19" aria-hidden="true">
+            <a class="social__link" href="https://www.facebook.com/htmlacademy" aria-label="Страница Кэт энерджи в Фейсбук">
+              <svg class="social__link--facebook" width="10" height="19" role="img">
                 <use xlink:href="img/sprite.svg#icon-fb"></use>
               </svg>
             </a>
@@ -245,14 +216,15 @@
       <div class="page-footer__copyright copyright">
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML академия.Все права защищены.">
           <span class="copyright__company">HTML Academy</span>
-          <svg class="copyright__logo" width="27" height="34" aria-hidden="true">
+          <svg class="copyright__logo" width="27" height="34" role="img">
             <use xlink:href="img/sprite.svg#icon-academy"></use>
           </svg>
         </a>
       </div>
     </div>
   </footer>
-  <script src="js/svgxuse.min.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/picturefill.js" async></script>
+  <script src="js/svgxuse.min.js"></script>
 </body>
 </html>

@@ -1,6 +1,96 @@
 .legend-title {
+  position: relative;
+  width: 100%;
+  margin-bottom: 34px;
   font-size: 24px;
   line-height: 24px;
+  font-weight: 400;
   font-family: "Oswald", "Arial", sans-serif;
-  color: @font-light;
+  color: @font-dark;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: -20px;
+    top: 29%;
+    width: 99px;
+    height: 3px;
+    background: #68b738;
+  }
+}
+
+.legend-title--comment {
+  margin-bottom: 36px;
+
+  &::after {
+    top: 60%;
+    width: 158px;
+  }
+}
+
+.legend-title--extra-prod {
+  margin-bottom: 40px;
+
+  &::after {
+    top: 60%;
+    width: 136px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .legend-title {
+    margin-bottom: 76px;
+    font-size: 36px;
+    line-height: 36px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -71px;
+      top: 63%;
+      width: 30px;
+      height: 3px;
+      background: #68b738;
+    }
+
+    &::after {
+      top: 63%;
+      right: -67px;
+      width: 145px;
+    }
+  }
+
+  .legend-title--comment::after {
+    width: 479px;
+  }
+
+  .legend-title--extra-prod {
+    margin-bottom: 67px;
+
+    &::after {
+      width: 445px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .legend-title {
+    &::before {
+      left: -110px;
+      width: 70px;
+    }
+
+    &::after {
+      right: -100px;
+      width: 769px;
+    }
+  }
+
+  .legend-title--comment::after {
+    width: 1102px;
+  }
+
+  .legend-title--extra-prod::after {
+    width: 1070px;
+  }
 }
