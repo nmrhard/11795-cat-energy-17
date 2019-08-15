@@ -1,6 +1,33 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+        <style>
+    HTML {
+      background-repeat: no-repeat;
+      background-position:  50% 0;
+      /* По умолчанию мобильный макет */
+      background-image: url( "img/pixel/cat-energy-form-mobile.jpg" );
+    }
+    /* Планшет */
+    @media ( min-width: 768px ) {
+      HTML {
+        /* Планшетный макет */
+        background-image: url( "img/pixel/cat-energy-form-tablet.jpg" );
+      }
+    }
+    /* Десктоп */
+    @media ( min-width: 1300px ) {
+      HTML {
+        /* Десктопный макет */
+        background-image: url( "img/pixel/cat-energy-form-desktop.jpg");
+      }
+    }
+    BODY {
+      opacity: .5;
+    }
+  </style>
+  <link rel="stylesheet" href="../node_modules/pixel-glass/styles.css">
+  <script src="../node_modules/pixel-glass/script.js"></script>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -39,7 +66,7 @@
     </div>
   </header>
   <main class="page-inner">
-    <div class="page_inner__container">
+    <div class="page-inner__container">
       <h1 class="page-title page-title--questionnaire">Подбор программы</h1>
       <p class="page-inner__instruction">
         Заполните анкету и мы подберем<br>
@@ -173,21 +200,21 @@
         <ul class="social__list">
           <li class="social__item">
             <a class="social__link" href="https://vk.com/htmlacademy" aria-label="Страница Кэт энерджи в Вконтакте" aria-hidden="true">
-              <svg class="social__link--vkontakte" width="22" height="12" role="img">
+              <svg class="social__icon-vkontakte" width="22" height="12" role="img">
                 <use xlink:href="img/sprite.svg#icon-vk"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy" aria-label="Страница Кэт энерджи в Инстаграм">
-              <svg class="social__link--instagram" width="16" height="16" role="img">
+              <svg class="social__icon-instagram" width="16" height="16" role="img">
                 <use xlink:href="img/sprite.svg#icon-insta"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link" href="https://www.facebook.com/htmlacademy" aria-label="Страница Кэт энерджи в Фейсбук">
-              <svg class="social__link--facebook" width="10" height="19" role="img">
+              <svg class="social__icon-facebook" width="10" height="19" role="img">
                 <use xlink:href="img/sprite.svg#icon-fb"></use>
               </svg>
             </a>

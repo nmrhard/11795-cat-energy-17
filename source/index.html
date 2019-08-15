@@ -1,6 +1,33 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <style>
+    HTML {
+      background-repeat: no-repeat;
+      background-position:  50% 0;
+      /* По умолчанию мобильный макет */
+      background-image: url( "img/pixel/cat-energy-index-mobile.jpg" );
+    }
+    /* Планшет */
+    @media ( min-width: 768px ) {
+      HTML {
+        /* Планшетный макет */
+        background-image: url( "img/pixel/cat-energy-index-tablet.jpg" );
+      }
+    }
+    /* Десктоп */
+    @media ( min-width: 1300px ) {
+      HTML {
+        /* Десктопный макет */
+        background-image: url( "img/pixel/cat-energy-index-desktop.jpg");
+      }
+    }
+    BODY {
+      opacity: .5;
+    }
+  </style>
+  <link rel="stylesheet" href="../node_modules/pixel-glass/styles.css">
+  <script src="../node_modules/pixel-glass/script.js"></script>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -56,14 +83,14 @@
         <h2 class="visually-hidden">Подбор питания</h2>
         <ul class="programms__list">
           <li class="programms__item programms__item--loss">
-            <h2 class="programms__title">Похудение</h2>
+            <h3 class="programms__title">Похудение</h3>
             <p class="programms__description">
               Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
             </p>
             <a class="programms__link" href="#">Каталог Slim</a>
           </li>
           <li class="programms__item programms__item--gain">
-            <h2 class="programms__title">Набор массы</h2>
+            <h3 class="programms__title">Набор массы</h3>
             <p class="programms__description">
               Заработать авторитет среди дворовых котов и даже собак?
               Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
@@ -104,7 +131,7 @@
             <p class="example__description">
               Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
             </p>
-            <div class="exapmle__numbers">
+            <div class="example__numbers">
               <table class="example__result">
                 <tr class="example__weight">
                   <td class="example__value">5 кг</td>
@@ -121,7 +148,7 @@
                   </td>
                 </tr>
               </table>
-              <p class="example__cost">Затраты на питание: <span class="example__cost--value">15 000 руб.</span></p>
+              <p class="example__cost">Затраты на питание: <span class="example__cost-value">15 000 руб.</span></p>
             </div>
           </div>
         </div>
@@ -192,21 +219,21 @@
         <ul class="social__list">
           <li class="social__item">
             <a class="social__link" href="https://vk.com/htmlacademy" aria-label="Страница Кэт энерджи в Вконтакте" aria-hidden="true">
-              <svg class="social__link--vkontakte" width="22" height="12" role="img">
+              <svg class="social__icon-vkontakte" width="22" height="12" role="img">
                 <use xlink:href="img/sprite.svg#icon-vk"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy" aria-label="Страница Кэт энерджи в Инстаграм">
-              <svg class="social__link--instagram" width="16" height="16" role="img">
+              <svg class="social__icon-instagram" width="16" height="16" role="img">
                 <use xlink:href="img/sprite.svg#icon-insta"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link" href="https://www.facebook.com/htmlacademy" aria-label="Страница Кэт энерджи в Фейсбук">
-              <svg class="social__link--facebook" width="10" height="19" role="img">
+              <svg class="social__icon-facebook" width="10" height="19" role="img">
                 <use xlink:href="img/sprite.svg#icon-fb"></use>
               </svg>
             </a>

@@ -1,6 +1,33 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+      <style>
+    HTML {
+      background-repeat: no-repeat;
+      background-position:  50% 0;
+      /* По умолчанию мобильный макет */
+      background-image: url( "img/pixel/cat-energy-catalog-mobile.jpg" );
+    }
+    /* Планшет */
+    @media ( min-width: 768px ) {
+      HTML {
+        /* Планшетный макет */
+        background-image: url( "img/pixel/cat-energy-catalog-tablet.jpg" );
+      }
+    }
+    /* Десктоп */
+    @media ( min-width: 1300px ) {
+      HTML {
+        /* Десктопный макет */
+        background-image: url( "img/pixel/cat-energy-catalog-desktop.jpg");
+      }
+    }
+    BODY {
+      opacity: .5;
+    }
+  </style>
+  <link rel="stylesheet" href="../node_modules/pixel-glass/styles.css">
+  <script src="../node_modules/pixel-glass/script.js"></script>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -39,7 +66,7 @@
     </div>
   </header>
   <main class="page-inner">
-    <div class="page_inner__container">
+    <div class="page-inner__container">
       <h1 class="page-title">Каталог продукции</h1>
     </div>
     <section class="products">
@@ -62,23 +89,23 @@
                 <a class="products__link-title" href="#">
                   <h3 class="products__title">Cat Energy PRO 500 г</h3>
                 </a>
-                <table class="pdoducts__spec">
+                <table class="products__spec">
                   <tr>
-                    <td class="pdoducts__filed">Объем</td>
-                    <td class="pdoducts__value">500 г</td>
+                    <td class="products__filed">Объем</td>
+                    <td class="products__value">500 г</td>
                   </tr>
                   <tr>
-                    <td class="pdoducts__filed">Вкус</td>
-                    <td class="pdoducts__value">Курица</td>
+                    <td class="products__filed">Вкус</td>
+                    <td class="products__value">Курица</td>
                   </tr>
                   <tr>
-                    <td class="pdoducts__filed">Цена</td>
-                    <td class="pdoducts__value">700 Р</td>
+                    <td class="products__filed">Цена</td>
+                    <td class="products__value">700 Р</td>
                   </tr>
                 </table>
               </div>
-              <div class="product__order">
-                <a href="#" class="pdoducts__buy button">Заказать</a>
+              <div class="products__order">
+                <a href="#" class="products__buy button">Заказать</a>
               </div>
             </div>
           </li>
@@ -98,23 +125,23 @@
                 <a class="products__link-title" href="#">
                   <h3 class="products__title">Cat Energy PRO 1000 г</h3>
                 </a>
-                <table class="pdoducts__spec">
+                <table class="products__spec">
                   <tr>
-                    <td class="pdoducts__filed">Объем</td>
-                    <td class="pdoducts__value">1000 г</td>
+                    <td class="products__filed">Объем</td>
+                    <td class="products__value">1000 г</td>
                   </tr>
                   <tr>
-                    <td class="pdoducts__filed">Вкус</td>
-                    <td class="pdoducts__value">Курица</td>
+                    <td class="products__filed">Вкус</td>
+                    <td class="products__value">Курица</td>
                   </tr>
                   <tr>
-                    <td class="pdoducts__filed">Цена</td>
-                    <td class="pdoducts__value">1000 Р</td>
+                    <td class="products__filed">Цена</td>
+                    <td class="products__value">1000 Р</td>
                   </tr>
                 </table>
               </div>
-              <div class="product__order">
-                <a href="#" class="pdoducts__buy button">Заказать</a>
+              <div class="products__order">
+                <a href="#" class="products__buy button">Заказать</a>
               </div>
             </div>
           </li>
@@ -134,23 +161,23 @@
                 <a class="products__link-title" href="#">
                   <h3 class="products__title">Cat Energy PRO 500 г</h3>
                 </a>
-                <table class="pdoducts__spec">
+                <table class="products__spec">
                   <tr>
-                    <td class="pdoducts__filed">Объем</td>
-                    <td class="pdoducts__value">500 г</td>
+                    <td class="products__filed">Объем</td>
+                    <td class="products__value">500 г</td>
                   </tr>
                   <tr>
-                    <td class="pdoducts__filed">Вкус</td>
-                    <td class="pdoducts__value">Рыба</td>
+                    <td class="products__filed">Вкус</td>
+                    <td class="products__value">Рыба</td>
                   </tr>
                   <tr>
-                    <td class="pdoducts__filed">Цена</td>
-                    <td class="pdoducts__value">700 Р</td>
+                    <td class="products__filed">Цена</td>
+                    <td class="products__value">700 Р</td>
                   </tr>
                 </table>
               </div>
-              <div class="product__order">
-                <a href="#" class="pdoducts__buy button">Заказать</a>
+              <div class="products__order">
+                <a href="#" class="products__buy button">Заказать</a>
               </div>
             </div>
           </li>
@@ -170,23 +197,23 @@
                 <a class="products__link-title" href="#">
                   <h3 class="products__title">Cat Energy PRO 1000 г</h3>
                 </a>
-                <table class="pdoducts__spec">
+                <table class="products__spec">
                   <tr>
-                    <td class="pdoducts__filed">Объем</td>
-                    <td class="pdoducts__value">1000 г</td>
+                    <td class="products__filed">Объем</td>
+                    <td class="products__value">1000 г</td>
                   </tr>
                   <tr>
-                    <td class="pdoducts__filed">Вкус</td>
-                    <td class="pdoducts__value">Рыба</td>
+                    <td class="products__filed">Вкус</td>
+                    <td class="products__value">Рыба</td>
                   </tr>
                   <tr>
-                    <td class="pdoducts__filed">Цена</td>
-                    <td class="pdoducts__value">1000 Р</td>
+                    <td class="products__filed">Цена</td>
+                    <td class="products__value">1000 Р</td>
                   </tr>
                 </table>
               </div>
-              <div class="product__order">
-                <a href="#" class="pdoducts__buy button">Заказать</a>
+              <div class="products__order">
+                <a href="#" class="products__buy button">Заказать</a>
               </div>
             </div>
           </li>
@@ -206,23 +233,23 @@
                 <a class="products__link-title" href="#">
                   <h3 class="products__title">Cat Energy Slim 500 г</h3>
                 </a>
-                <table class="pdoducts__spec">
+                <table class="products__spec">
                   <tr>
-                    <td class="pdoducts__filed">Объем</td>
-                    <td class="pdoducts__value">500 г</td>
+                    <td class="products__filed">Объем</td>
+                    <td class="products__value">500 г</td>
                   </tr>
                   <tr>
-                    <td class="pdoducts__filed">Вкус</td>
-                    <td class="pdoducts__value">Гречка</td>
+                    <td class="products__filed">Вкус</td>
+                    <td class="products__value">Гречка</td>
                   </tr>
                   <tr>
-                    <td class="pdoducts__filed">Цена</td>
-                    <td class="pdoducts__value">400 Р</td>
+                    <td class="products__filed">Цена</td>
+                    <td class="products__value">400 Р</td>
                   </tr>
                 </table>
               </div>
-              <div class="product__order">
-                <a href="#" class="pdoducts__buy button">Заказать</a>
+              <div class="products__order">
+                <a href="#" class="products__buy button">Заказать</a>
               </div>
             </div>
           </li>
@@ -242,23 +269,23 @@
                 <a class="products__link-title" href="#">
                   <h3 class="products__title">Cat Energy Slim 1000 г</h3>
                 </a>
-                <table class="pdoducts__spec">
+                <table class="products__spec">
                   <tr>
-                    <td class="pdoducts__filed">Объем</td>
-                    <td class="pdoducts__value">1000 г</td>
+                    <td class="products__filed">Объем</td>
+                    <td class="products__value">1000 г</td>
                   </tr>
                   <tr>
-                    <td class="pdoducts__filed">Вкус</td>
-                    <td class="pdoducts__value">Гречка</td>
+                    <td class="products__filed">Вкус</td>
+                    <td class="products__value">Гречка</td>
                   </tr>
                   <tr>
-                    <td class="pdoducts__filed">Цена</td>
-                    <td class="pdoducts__value">700 Р</td>
+                    <td class="products__filed">Цена</td>
+                    <td class="products__value">700 Р</td>
                   </tr>
                 </table>
               </div>
-              <div class="product__order">
-                <a href="#" class="pdoducts__buy button">Заказать</a>
+              <div class="products__order">
+                <a href="#" class="products__buy button">Заказать</a>
               </div>
             </div>
           </li>
@@ -278,23 +305,23 @@
                 <a class="products__link-title" href="#">
                   <h3 class="products__title">Cat Energy Slim 500 г</h3>
                 </a>
-                <table class="pdoducts__spec">
+                <table class="products__spec">
                   <tr>
-                    <td class="pdoducts__filed">Объем</td>
-                    <td class="pdoducts__value">500 г</td>
+                    <td class="products__filed">Объем</td>
+                    <td class="products__value">500 г</td>
                   </tr>
                   <tr>
-                    <td class="pdoducts__filed">Вкус</td>
-                    <td class="pdoducts__value">Рис</td>
+                    <td class="products__filed">Вкус</td>
+                    <td class="products__value">Рис</td>
                   </tr>
                   <tr>
-                    <td class="pdoducts__filed">Цена</td>
-                    <td class="pdoducts__value">500 Р</td>
+                    <td class="products__filed">Цена</td>
+                    <td class="products__value">500 Р</td>
                   </tr>
                 </table>
               </div>
-              <div class="product__order">
-                <a href="#" class="pdoducts__buy button">Заказать</a>
+              <div class="products__order">
+                <a href="#" class="products__buy button">Заказать</a>
               </div>
             </div>
           </li>
@@ -394,21 +421,21 @@
         <ul class="social__list">
           <li class="social__item">
             <a class="social__link" href="https://vk.com/htmlacademy" aria-label="Страница Кэт энерджи в Вконтакте" aria-hidden="true">
-              <svg class="social__link--vkontakte" width="22" height="12" role="img">
+              <svg class="social__icon-vkontakte" width="22" height="12" role="img">
                 <use xlink:href="img/sprite.svg#icon-vk"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy" aria-label="Страница Кэт энерджи в Инстаграм">
-              <svg class="social__link--instagram" width="16" height="16" role="img">
+              <svg class="social__icon-instagram" width="16" height="16" role="img">
                 <use xlink:href="img/sprite.svg#icon-insta"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link" href="https://www.facebook.com/htmlacademy" aria-label="Страница Кэт энерджи в Фейсбук">
-              <svg class="social__link--facebook" width="10" height="19" role="img">
+              <svg class="social__icon-facebook" width="10" height="19" role="img">
                 <use xlink:href="img/sprite.svg#icon-fb"></use>
               </svg>
             </a>
