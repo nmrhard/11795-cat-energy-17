@@ -109,6 +109,10 @@
   }
 }
 
+.programms__link:active::after {
+  opacity: 0.3;
+}
+
 @media (min-width: @tablet-width) {
   .programms {
     padding-top: 0;
@@ -197,6 +201,7 @@
   .programms__list {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .programms__item {
@@ -207,6 +212,10 @@
     padding-right: 55px;
     padding-left: 52px;
     box-sizing: border-box;
+
+    &:nth-child(n+3) {
+      margin-top: 80px;
+    }
 
     &::before {
       top: 141px;
