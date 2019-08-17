@@ -14,7 +14,7 @@ var webp = require("gulp-webp");
 var del = require("del");
 var htmlmin = require("gulp-htmlmin");
 var uglify = require("gulp-uglify");
-var pipeline = require('readable-stream').pipeline;
+var pipeline = require("readable-stream").pipeline;
 
 gulp.task("css", function () {
   return gulp.src("source/less/style.less")
