@@ -40,6 +40,10 @@
   border-radius: 50%;
 }
 
+.questionnaire__filter-radio:focus + .form-label::before {
+  border: 1px solid #444444;
+}
+
 .questionnaire__filter-radio:checked + .form-label::after {
   content: "";
   position: absolute;
@@ -59,6 +63,10 @@
   width: 28px;
   height: 28px;
   border: 1px solid #cdcdcd;
+}
+
+.questionnaire__filter-checkbox:focus + .form-label::before {
+  border: 1px solid #444444;
 }
 
 .questionnaire__filter-checkbox:checked + .form-label::after {
